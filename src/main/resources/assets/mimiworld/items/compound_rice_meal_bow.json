@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "mimiworld:item/compound_rice_meal_bow",
+    "model": {
+      "type": "geckolib:geckolib"
+    }
+  }
+}

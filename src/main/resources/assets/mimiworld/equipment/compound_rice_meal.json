@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mimiworld:compound_rice_meal"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mimiworld:compound_rice_meal"
+      }
+    ]
+  }
+}

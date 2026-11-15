@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "mimiworld:coarse_rice_block",
+    "mimiworld:rice_block",
+    "mimiworld:rice_ore",
+    "mimiworld:remnant_fallen_abyss_rock",
+    "mimiworld:remnant_fallen_bedrock",
+    "mimiworld:polished_remnant_fallen_abyss_rock",
+    "mimiworld:crusher",
+    "mimiworld:mixer",
+    "mimiworld:rice_maker",
+    "mimiworld:rice_pounding_table",
+    "mimiworld:precipitation_table"
+  ]
+}

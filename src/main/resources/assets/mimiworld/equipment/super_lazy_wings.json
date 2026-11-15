@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mimiworld:super_lazy_wings"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mimiworld:super_lazy_wings"
+      }
+    ]
+  }
+}

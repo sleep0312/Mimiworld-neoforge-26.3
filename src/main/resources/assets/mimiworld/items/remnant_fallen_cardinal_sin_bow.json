@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "mimiworld:item/remnant_fallen_cardinal_sin_bow",
+    "model": {
+      "type": "geckolib:geckolib"
+    }
+  }
+}

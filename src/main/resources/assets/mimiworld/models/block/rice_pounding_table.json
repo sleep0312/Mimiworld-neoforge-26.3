@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "mimiworld:block/rice_pounding_table",
+    "side": "mimiworld:block/rice_pounding_table",
+    "top": "mimiworld:block/rice_pounding_table_top"
+  }
+}

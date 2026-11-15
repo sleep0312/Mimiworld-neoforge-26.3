@@ -1,0 +1,42 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.walk2": {
+			"loop": true,
+			"animation_length": 2.4,
+			"bones": {
+				"tail": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.3": {
+							"vector": [3.5, 0, 0]
+						},
+						"0.6": {
+							"vector": [5, 0, 0]
+						},
+						"0.9": {
+							"vector": [3.5, 0, 0]
+						},
+						"1.2": {
+							"vector": [0, 0, 0]
+						},
+						"1.5": {
+							"vector": [-3.5, 0, 0]
+						},
+						"1.8": {
+							"vector": [-5, 0, 0]
+						},
+						"2.1": {
+							"vector": [-3.5, 0, 0]
+						},
+						"2.4": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}

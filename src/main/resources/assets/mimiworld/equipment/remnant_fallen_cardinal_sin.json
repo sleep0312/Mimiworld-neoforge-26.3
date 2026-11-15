@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mimiworld:remnant_fallen_cardinal_sin"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mimiworld:remnant_fallen_cardinal_sin"
+      }
+    ]
+  }
+}

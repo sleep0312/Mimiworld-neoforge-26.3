@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mimiworld:super_heavy_crystal"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mimiworld:super_heavy_crystal"
+      }
+    ]
+  }
+}

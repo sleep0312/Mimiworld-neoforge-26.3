@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mimiworld:heavenfall"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mimiworld:heavenfall"
+      }
+    ]
+  }
+}

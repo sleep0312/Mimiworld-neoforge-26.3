@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "mimiworld:block/rice_maker",
+    "side": "mimiworld:block/rice_maker",
+    "top": "mimiworld:block/rice_maker_top"
+  }
+}

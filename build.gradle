@@ -62,6 +62,14 @@ repositories {
         name = 'BMCLAPI'
         url = 'https://bmclapi2.bangbang93.com/maven'
     }
+    // Modrinth Maven：GeckoLib 等模组依赖
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup 'maven.modrinth'
+        }
+    }
     mavenCentral()
 }
 
@@ -158,6 +166,10 @@ configurations {
 }
 
 dependencies {
+    // GeckoLib 5（NeoForge 26.3）：自定义生物/方块/物品/立体盔甲动画库
+    // 使用 Modrinth 版本 ID 以明确选中 NeoForge 构件（版本号 5.5.7 默认指向 Fabric 文件）
+    implementation "maven.modrinth:geckolib:2s1O42FX"
+
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"

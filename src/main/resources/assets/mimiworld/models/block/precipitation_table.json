@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "mimiworld:block/precipitation_table",
+    "side": "mimiworld:block/precipitation_table",
+    "top": "mimiworld:block/precipitation_table_top"
+  }
+}

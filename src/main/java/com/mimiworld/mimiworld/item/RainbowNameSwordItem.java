@@ -1,0 +1,62 @@
+package com.mimiworld.mimiworld.item;
+
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.util.Util;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+
+/**
+ * 「超懒神剑」系列：剑类武器（可近战、带耐久与附魔），同时显示逐字动态彩虹名称。
+ */
+public class RainbowNameSwordItem extends Item {
+
+    /** 一个完整色相循环的毫秒数 */
+    private static final long CYCLE_MS = 3000L;
+    /** 相邻字符的色相差，形成横向渐变 */
+    private static final float CHAR_HUE_STEP = 0.07F;
+
+    public RainbowNameSwordItem(Properties properties) {
+        super(properties);
+    }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        return rainbow(Component.translatable(getDescriptionId()).getString());
+    }
+
+    /** 把任意文本渲染成逐字彩虹渐变。 */
+    public static Component rainbow(String text) {
+        float baseHue = (Util.getMillis() % CYCLE_MS) / (float) CYCLE_MS;
+        MutableComponent result = Component.empty();
+        for (int i = 0; i < text.length(); i++) {
+            float hue = baseHue + i * CHAR_HUE_STEP;
+            hue -= (float) Math.floor(hue);
+            int rgb = hsbToRgb(hue, 0.75F, 1.0F) | 0xFF000000;
+            result.append(Component.literal(String.valueOf(text.charAt(i)))
+                    .withStyle(style -> style.withColor(rgb)));
+        }
+        return result;
+    }
+
+    /** 不依赖 java.awt 的 HSB→RGB 转换，返回 0xRRGGBB。 */
+    private static int hsbToRgb(float hue, float saturation, float brightness) {
+        int h = (int) (hue * 6.0F);
+        float f = hue * 6.0F - h;
+        float p = brightness * (1.0F - saturation);
+        float q = brightness * (1.0F - f * saturation);
+        float t = brightness * (1.0F - (1.0F - f) * saturation);
+        float r;
+        float g;
+        float b;
+        switch (h % 6) {
+            case 0 -> { r = brightness; g = t; b = p; }
+            case 1 -> { r = q; g = brightness; b = p; }
+            case 2 -> { r = p; g = brightness; b = t; }
+            case 3 -> { r = p; g = q; b = brightness; }
+            case 4 -> { r = t; g = p; b = brightness; }
+            default -> { r = brightness; g = p; b = q; }
+        }
+        return ((int) (r * 255.0F) << 16) | ((int) (g * 255.0F) << 8) | (int) (b * 255.0F);
+    }
+}

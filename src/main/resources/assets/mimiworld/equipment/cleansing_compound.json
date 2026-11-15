@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mimiworld:cleansing_compound"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mimiworld:cleansing_compound"
+      }
+    ]
+  }
+}
