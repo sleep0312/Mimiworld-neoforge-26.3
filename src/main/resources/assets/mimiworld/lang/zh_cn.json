@@ -1,0 +1,14 @@
+{
+  "itemGroup.mimiworld": "米米世界",
+
+  "block.mimiworld.example_block": "示例方块",
+  "item.mimiworld.example_item": "示例物品",
+
+  "mimiworld.configuration.title": "米米世界 配置",
+  "mimiworld.configuration.section.mimiworld.common.toml": "米米世界 配置",
+  "mimiworld.configuration.section.mimiworld.common.toml.title": "米米世界 配置",
+  "mimiworld.configuration.items": "物品列表",
+  "mimiworld.configuration.logDirtBlock": "记录泥土方块",
+  "mimiworld.configuration.magicNumberIntroduction": "魔法数字介绍文本",
+  "mimiworld.configuration.magicNumber": "魔法数字"
+}

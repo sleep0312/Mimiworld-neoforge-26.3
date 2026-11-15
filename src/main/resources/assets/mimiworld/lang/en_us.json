@@ -1,0 +1,14 @@
+{
+  "itemGroup.mimiworld": "Mimi World",
+
+  "block.mimiworld.example_block": "Example Block",
+  "item.mimiworld.example_item": "Example Item",
+
+  "mimiworld.configuration.title": "Mimi World Configs",
+  "mimiworld.configuration.section.mimiworld.common.toml": "Mimi World Configs",
+  "mimiworld.configuration.section.mimiworld.common.toml.title": "Mimi World Configs",
+  "mimiworld.configuration.items": "Item List",
+  "mimiworld.configuration.logDirtBlock": "Log Dirt Block",
+  "mimiworld.configuration.magicNumberIntroduction": "Magic Number Text",
+  "mimiworld.configuration.magicNumber": "Magic Number"
+}
