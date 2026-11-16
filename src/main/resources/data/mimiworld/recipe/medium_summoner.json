@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  "minecraft:redstone_block",
+                "C":  "mimiworld:summon_core",
+                "L":  "mimiworld:rice_log"
+            },
+    "pattern":  [
+                    "LBL",
+                    "BLB",
+                    "LCL"
+                ],
+    "result":  {
+                   "id":  "mimiworld:medium_summoner"
+               }
+}

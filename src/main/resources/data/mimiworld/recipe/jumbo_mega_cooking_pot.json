@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  "minecraft:iron_block",
+                "H":  "mimiworld:spoon",
+                "P":  "minecraft:heavy_weighted_pressure_plate",
+                "R":  "mimiworld:pot_lid"
+            },
+    "pattern":  [
+                    "BRB",
+                    "BHB",
+                    "BPB"
+                ],
+    "result":  {
+                   "id":  "mimiworld:jumbo_mega_cooking_pot"
+               }
+}

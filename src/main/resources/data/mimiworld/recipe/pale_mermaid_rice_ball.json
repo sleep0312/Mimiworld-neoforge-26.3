@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:kelp_slice",
+                "B":  "mimiworld:onigiri",
+                "C":  "mimiworld:cooked_pale_mermaid_tail"
+            },
+    "pattern":  [
+                    "ABA",
+                    "ACA",
+                    "ABA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:pale_mermaid_rice_ball"
+               }
+}

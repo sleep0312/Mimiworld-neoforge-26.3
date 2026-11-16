@@ -1,0 +1,11 @@
+{
+    "type":  "mimiworld:mimi_dimension",
+    "generator":  {
+                      "type":  "minecraft:noise",
+                      "settings":  "mimiworld:mimi_overworld",
+                      "biome_source":  {
+                                           "type":  "minecraft:fixed",
+                                           "biome":  "mimiworld:mimi_plains"
+                                       }
+                  }
+}

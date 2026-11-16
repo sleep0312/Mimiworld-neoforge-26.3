@@ -1,7 +1,6 @@
 package com.mimiworld.mimiworld.block;
 
 import com.mimiworld.mimiworld.block.entity.MixerBlockEntity;
-import com.mimiworld.mimiworld.block.entity.ModBlockEntities;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

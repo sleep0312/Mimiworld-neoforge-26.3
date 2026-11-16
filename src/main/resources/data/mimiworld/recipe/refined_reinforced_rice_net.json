@@ -1,0 +1,15 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "N":  "mimiworld:refined_rice_fiber"
+            },
+    "pattern":  [
+                    "N N",
+                    "   ",
+                    "N N"
+                ],
+    "result":  {
+                   "id":  "mimiworld:refined_reinforced_rice_net"
+               }
+}

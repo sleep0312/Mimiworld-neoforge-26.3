@@ -38,3 +38,15 @@ run/
 **/src/generated/**/.cache/
 repo/
 !**/src/**/repo/
+
+### Archived releases ###
+过往版本保留文件夹/
+
+### Local build / tooling artifacts ###
+.screenshots/
+downloads/
+logs/
+crash-reports/
+*.log
+*.tmp
+Thumbs.db

@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "D":  "mimiworld:rice_crystal_alloy_helmet",
+                "H":  "mimiworld:super_heavy_crystal",
+                "M":  "mimiworld:refined_rice_fiber",
+                "T":  "mimiworld:tiger_king_razor_claw"
+            },
+    "pattern":  [
+                    "HTH",
+                    "HDH",
+                    " M "
+                ],
+    "result":  {
+                   "id":  "mimiworld:super_heavy_crystal_helmet"
+               }
+}

@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "B":  "mimiworld:cleansing_compound_ingot",
+                "N":  "mimiworld:refined_reinforced_rice_net",
+                "S":  "mimiworld:reinforced_rice_stick"
+            },
+    "pattern":  [
+                    "BNS",
+                    "NSB",
+                    "BNS"
+                ],
+    "result":  {
+                   "id":  "mimiworld:cleansing_compound_bow"
+               }
+}

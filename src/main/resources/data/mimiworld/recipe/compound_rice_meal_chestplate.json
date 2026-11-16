@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "D":  "mimiworld:super_heavy_crystal_chestplate",
+                "M":  "mimiworld:refined_rice_fiber",
+                "P":  "mimiworld:compound_rice_meal_ingot",
+                "T":  "mimiworld:ox_king_crystal_horn"
+            },
+    "pattern":  [
+                    "PPP",
+                    "PTP",
+                    "MDM"
+                ],
+    "result":  {
+                   "id":  "mimiworld:compound_rice_meal_chestplate"
+               }
+}

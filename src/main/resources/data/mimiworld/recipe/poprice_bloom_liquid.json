@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  "mimiworld:rice_fruit_cleansing_solution",
+                "F":  "mimiworld:huomi_powder",
+                "P":  "mimiworld:baoliemi_rod"
+            },
+    "pattern":  [
+                    "PFP",
+                    "FBF",
+                    "PFP"
+                ],
+    "result":  {
+                   "id":  "mimiworld:poprice_bloom_liquid"
+               }
+}

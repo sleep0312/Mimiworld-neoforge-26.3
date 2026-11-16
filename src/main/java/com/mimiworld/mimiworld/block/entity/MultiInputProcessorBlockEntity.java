@@ -2,7 +2,6 @@ package com.mimiworld.mimiworld.block.entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.Container;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.Containers;
@@ -156,9 +155,7 @@ public abstract class MultiInputProcessorBlockEntity extends BlockEntity
     private void tick() {
         ItemStack[] inputs = collectInputs();
         ProcessorRecipe recipe = findRecipe(inputs);
-        boolean canProcess = recipe != null && canOutputAccept(recipe.result());
-
-        if (!canProcess) {
+        if (recipe == null || !canOutputAccept(recipe.result())) {
             boolean changed = progress != 0;
             progress = 0;
             data.set(DATA_PROGRESS, 0);

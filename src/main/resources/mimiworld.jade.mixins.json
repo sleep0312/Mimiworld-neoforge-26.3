@@ -1,0 +1,12 @@
+{
+  "required": false,
+  "minVersion": "0.8.5",
+  "package": "com.mimiworld.mimiworld.mixin.jade",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "JadeStatusEffectsProviderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

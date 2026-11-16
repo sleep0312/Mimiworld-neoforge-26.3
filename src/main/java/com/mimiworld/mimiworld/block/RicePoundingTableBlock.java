@@ -1,6 +1,5 @@
 package com.mimiworld.mimiworld.block;
 
-import com.mimiworld.mimiworld.block.entity.ModBlockEntities;
 import com.mimiworld.mimiworld.block.entity.RicePoundingTableBlockEntity;
 
 import net.minecraft.core.BlockPos;

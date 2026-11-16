@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  "mimiworld:rice_brush_pen",
+                "K":  "mimiworld:rice_book",
+                "S":  "mimiworld:nianmi_silk_thread"
+            },
+    "pattern":  [
+                    "S  ",
+                    "KB ",
+                    "   "
+                ],
+    "result":  {
+                   "id":  "mimiworld:book_rice_pen"
+               }
+}

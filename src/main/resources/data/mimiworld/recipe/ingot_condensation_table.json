@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:deep_dyed_remnant_heaven_wing",
+                "B":  "mimiworld:deep_dyed_mermaid_tear",
+                "C":  "mimiworld:remnant_fallen_ingot"
+            },
+    "pattern":  [
+                    "ABA",
+                    "BBB",
+                    "CCC"
+                ],
+    "result":  {
+                   "id":  "mimiworld:ingot_condensation_table"
+               }
+}

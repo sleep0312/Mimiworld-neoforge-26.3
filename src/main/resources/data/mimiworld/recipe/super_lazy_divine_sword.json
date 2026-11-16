@@ -1,0 +1,15 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "I":  "mimiworld:ancient_sword_intent",
+                "L":  "mimiworld:sword_quenching_liquid",
+                "S":  "mimiworld:super_lazy_alloy_sword"
+            },
+    "pattern":  [
+                    "SIL"
+                ],
+    "result":  {
+                   "id":  "mimiworld:super_lazy_divine_sword"
+               }
+}

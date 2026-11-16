@@ -69,6 +69,11 @@ public class MixerBlockEntity extends BlockEntity implements MenuProvider, Conta
         RECIPES.add(new MixerRecipe(List.copyOf(list), extra, result));
     }
 
+    /** JEI 只读快照。 */
+    public static List<MixerRecipe> jeiRecipes() {
+        return List.copyOf(RECIPES);
+    }
+
     private final NonNullList<ItemStack> items = NonNullList.withSize(TOTAL_SLOTS, ItemStack.EMPTY);
 
     public MixerBlockEntity(BlockPos pos, BlockState state) {

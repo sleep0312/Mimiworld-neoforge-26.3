@@ -9,6 +9,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Abilities;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -94,19 +95,33 @@ public final class ArmorEffectEvents {
 
         CompoundTag data = player.getPersistentData();
         if (wearsFlightArmor(player)) {
-            if (!player.getAbilities().mayfly) {
-                player.getAbilities().mayfly = true;
-                player.onUpdateAbilities();
-            }
+            setMayFly(player, true);
             data.putBoolean(ARMOR_FLIGHT_FLAG, true);
         } else if (data.getBoolean(ARMOR_FLIGHT_FLAG).orElse(false)) {
             if (!player.getAbilities().instabuild && !player.hasEffect(ModEffects.CREATIVE_FLIGHT)) {
-                player.getAbilities().mayfly = false;
-                player.getAbilities().flying = false;
-                player.onUpdateAbilities();
+                setMayFly(player, false);
             }
             data.putBoolean(ARMOR_FLIGHT_FLAG, false);
         }
+    }
+
+    /**
+     * 更新玩家的创造飞行能力。
+     *
+     * <p>26.3 中直接写 {@code Abilities.mayfly} 字段已弃用，改用 {@link Abilities.Packed}
+     * 整体应用：关闭飞行许可时同时结束当前飞行状态，避免悬空。</p>
+     */
+    public static void setMayFly(Player player, boolean mayFly) {
+        Abilities abilities = player.getAbilities();
+        Abilities.Packed packed = abilities.pack();
+        boolean flying = mayFly && packed.flying();
+        if (packed.mayFly() == mayFly && packed.flying() == flying) {
+            return;
+        }
+        abilities.apply(new Abilities.Packed(
+                packed.invulnerable(), flying, mayFly, packed.instabuild(),
+                packed.mayBuild(), packed.flyingSpeed(), packed.walkingSpeed()));
+        player.onUpdateAbilities();
     }
 
     /** 玩家是否穿着任一提供创造飞行的防具部件。 */

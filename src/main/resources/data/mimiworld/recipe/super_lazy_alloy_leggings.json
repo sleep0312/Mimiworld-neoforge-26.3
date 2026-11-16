@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "B":  "mimiworld:super_lazy_alloy_ingot",
+                "D":  "mimiworld:cleansing_compound_leggings",
+                "N":  "mimiworld:refined_reinforced_rice_net",
+                "T":  "mimiworld:venom_azure_python_fang"
+            },
+    "pattern":  [
+                    "NDN",
+                    "BTB",
+                    "BBB"
+                ],
+    "result":  {
+                   "id":  "mimiworld:super_lazy_alloy_leggings"
+               }
+}

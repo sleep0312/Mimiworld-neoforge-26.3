@@ -1,0 +1,90 @@
+{
+    "type":  "minecraft:entity",
+    "pools":  [
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  5.0,
+                                                                             "min":  4.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:rice_crystal_alloy_ingot"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  3.0,
+                                                                             "min":  2.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:tiger_king_razor_claw"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "condition":  {
+                                                            "type":  "minecraft:random_chance",
+                                                            "chance":  0.25
+                                                        },
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  1.0,
+                                                                             "min":  1.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:tough_tiger_hide"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  1.0,
+                                                                             "min":  1.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:rice_crystal_tiger_king_head"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  }
+              ],
+    "random_sequence":  "mimiworld:entities/rice_crystal_tiger_king"
+}

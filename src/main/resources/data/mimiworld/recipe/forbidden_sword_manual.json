@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  "mimiworld:rice_book",
+                "P":  "mimiworld:rice_paper",
+                "T":  "minecraft:ghast_tear"
+            },
+    "pattern":  [
+                    "TPT",
+                    "BBB",
+                    "TPT"
+                ],
+    "result":  {
+                   "id":  "mimiworld:forbidden_sword_manual"
+               }
+}

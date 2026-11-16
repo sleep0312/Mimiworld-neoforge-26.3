@@ -1,0 +1,10 @@
+{
+    "type":  "minecraft:smelting",
+    "category":  "misc",
+    "cookingtime":  40,
+    "experience":  0.3,
+    "ingredient":  "mimiworld:mixed_crystal",
+    "result":  {
+                   "id":  "mimiworld:molten_mixed_crystal"
+               }
+}

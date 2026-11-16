@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "I":  "mimiworld:rice_crystal_alloy_ingot",
+                "T":  "mimiworld:small_summoner",
+                "V":  "mimiworld:rice_fruit_viscous_mixture"
+            },
+    "pattern":  [
+                    "IVI",
+                    "VTV",
+                    "IVI"
+                ],
+    "result":  {
+                   "id":  "mimiworld:rice_crystal_tiger_king_spawn_egg"
+               }
+}

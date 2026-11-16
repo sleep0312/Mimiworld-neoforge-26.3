@@ -1,0 +1,10 @@
+{
+    "type":  "minecraft:smelting",
+    "category":  "food",
+    "cookingtime":  200,
+    "experience":  0.35,
+    "ingredient":  "mimiworld:raw_tanmi_fish",
+    "result":  {
+                   "id":  "mimiworld:cooked_tanmi_fish"
+               }
+}

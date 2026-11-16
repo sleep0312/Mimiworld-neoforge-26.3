@@ -2,17 +2,28 @@ package com.mimiworld.mimiworld;
 
 import com.mimiworld.mimiworld.block.ModBlocks;
 import com.mimiworld.mimiworld.effect.ModEffects;
+import com.mimiworld.mimiworld.entity.ModEntities;
+import com.mimiworld.mimiworld.item.AncientPeltItem;
+import com.mimiworld.mimiworld.item.BookOfDepartureItem;
+import com.mimiworld.mimiworld.item.CookedRiceBallItem;
 import com.mimiworld.mimiworld.item.EffectFoodItem;
+import com.mimiworld.mimiworld.item.FieryGoldenEyesItem;
 import com.mimiworld.mimiworld.item.MimiArmorItem;
 import com.mimiworld.mimiworld.item.MimiArrowItem;
 import com.mimiworld.mimiworld.item.MimiBowItem;
+import com.mimiworld.mimiworld.item.MimiTotemItem;
+import com.mimiworld.mimiworld.item.MonkeyKingRuyiStaffItem;
 import com.mimiworld.mimiworld.item.RainbowNameItem;
 import com.mimiworld.mimiworld.item.RainbowNameSwordItem;
+import com.mimiworld.mimiworld.item.ReverseScaleGallItem;
+import com.mimiworld.mimiworld.item.RiceBallItem;
 import com.mimiworld.mimiworld.item.RiceGrassItem;
+import com.mimiworld.mimiworld.item.SacredRelicItem;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
@@ -21,26 +32,34 @@ import net.minecraft.util.Prediction;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemUseAnimation;
+import net.minecraft.world.item.MobBucketItem;
+import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.item.component.TypedEntityData;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import net.minecraft.world.item.consume_effects.ConsumeEffect;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.material.Fluids;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -49,6 +68,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 /**
  * 米米世界物品注册类。
@@ -224,13 +244,17 @@ public class ModItems {
     // ============================ 米与米制材料 ============================
 
     /** 米木棍 */
-    public static final DeferredItem<Item> RICE_STICK = material("rice_stick");
+    public static final DeferredItem<Item> RICE_STICK = ITEMS.registerItem("rice_stick",
+            properties -> new Item(properties.stacksTo(64)
+                    .component(net.minecraft.core.component.DataComponents.COOKING_FUEL, ModFuels.STICK)));
     /** 结晶米 */
     public static final DeferredItem<Item> CRYSTALLIZED_RICE = material("crystallized_rice");
     /** 重结晶米 */
     public static final DeferredItem<Item> RECRYSTALLIZED_RICE = material("recrystallized_rice");
     /** 可燃米 */
-    public static final DeferredItem<Item> COMBUSTIBLE_RICE = material("combustible_rice");
+    public static final DeferredItem<Item> COMBUSTIBLE_RICE = ITEMS.registerItem("combustible_rice",
+            properties -> new Item(properties.stacksTo(64)
+                    .component(net.minecraft.core.component.DataComponents.COOKING_FUEL, ModFuels.COMBUSTIBLE_RICE)));
     /** 强化米棍 */
     public static final DeferredItem<Item> REINFORCED_RICE_STICK = material("reinforced_rice_stick");
     /** 饭晶 */
@@ -549,6 +573,7 @@ public class ModItems {
     public static final DeferredItem<Item> RICE_POMACE = ITEMS.registerItem("rice_pomace",
             properties -> new Item(properties.stacksTo(64)) {
                 @Override
+                @SuppressWarnings("deprecation") // 26.3 暂未提供该提示钩子的替代方法
                 public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display,
                                             Consumer<Component> tooltip, TooltipFlag flag) {
                     tooltip.accept(Component.translatable("tooltip.mimiworld.rice_pomace.source")
@@ -1226,6 +1251,298 @@ public class ModItems {
             "final_sword_codex",
             properties -> new RainbowNameItem(properties.stacksTo(1)));
 
+    // ============================ 可投掷物品与图腾 ============================
+
+    /** 米团：可投掷，命中 1 伤害 + 反胃 I/缓慢 I 各 10s，冷却 2s。 */
+    public static final DeferredItem<Item> RICE_BALL =
+            ITEMS.registerItem("rice_ball", properties -> new RiceBallItem(properties.stacksTo(64)));
+
+    /** 熟米团：可投掷，命中 2.5 伤害 + 缓慢 III/失明 II 各 10s，冷却 2s。 */
+    public static final DeferredItem<Item> COOKED_RICE_BALL =
+            ITEMS.registerItem("cooked_rice_ball", properties -> new CookedRiceBallItem(properties.stacksTo(64)));
+
+    /** 米米图腾：主手/副手持有受致命伤时免死一次，效果同原版不死图腾。 */
+    public static final DeferredItem<Item> MIMI_TOTEM =
+            ITEMS.registerItem("mimi_totem", properties -> new MimiTotemItem(properties));
+
+    // ============================ Curios 饰品（圣遗物 / 神遗之书） ============================
+
+    /** 圣遗物槽位 ID（槽位数据见 data/mimiworld/curios/slots/sacred_relic.json）。 */
+    private static final String SACRED_RELIC = "sacred_relic";
+
+    /** 注册一件「圣遗物」饰品：堆叠 1，属性修饰符与蓝色说明行由配置提供。 */
+    private static DeferredItem<Item> relic(String name, List<SacredRelicItem.Modifier> modifiers,
+                                            String... tooltipKeys) {
+        return ITEMS.registerItem(name, properties -> new SacredRelicItem(
+                properties.stacksTo(1), SACRED_RELIC, modifiers, List.of(tooltipKeys)));
+    }
+
+    /** 构造一条 Curios 属性修饰符配置。 */
+    private static SacredRelicItem.Modifier relicModifier(Holder<Attribute> attribute, double amount,
+                                                          AttributeModifier.Operation operation, String suffix) {
+        return new SacredRelicItem.Modifier(attribute, amount, operation, suffix);
+    }
+
+    /** 启航之书：神遗之书槽位，抗性/跳跃/再生 + 时运 3/抢夺 3 + 生命与攻击百分比。 */
+    public static final DeferredItem<Item> BOOK_OF_DEPARTURE = ITEMS.registerItem(
+            "book_of_departure", properties -> new BookOfDepartureItem(properties.stacksTo(1)));
+
+    /** 火眼金睛：持续夜视，清除失明/黑暗。 */
+    public static final DeferredItem<Item> FIERY_GOLDEN_EYES = ITEMS.registerItem(
+            "fiery_golden_eyes", properties -> new FieryGoldenEyesItem(properties.stacksTo(1)));
+
+    /** 如意：攻击伤害 +5、攻击距离 +5。 */
+    public static final DeferredItem<Item> RUYI = relic("ruyi", List.of(
+            relicModifier(Attributes.ATTACK_DAMAGE, 5.0D, AttributeModifier.Operation.ADD_VALUE, "ruyi_attack_damage"),
+            relicModifier(Attributes.ENTITY_INTERACTION_RANGE, 5.0D,
+                    AttributeModifier.Operation.ADD_VALUE, "ruyi_attack_reach")),
+            "tooltip.mimiworld.ruyi.attack_reach",
+            "tooltip.mimiworld.ruyi.attack_damage");
+
+    /** 虎王之蔑：受到伤害拆分结算（事件实现）。 */
+    public static final DeferredItem<Item> TIGER_KING_DISDAIN = relic("tiger_king_disdain", List.of(),
+            "tooltip.mimiworld.tiger_king_disdain.installments",
+            "tooltip.mimiworld.tiger_king_disdain.interval");
+
+    /** 坚韧虎皮：护甲与攻击力动态换算（事件实现）。 */
+    public static final DeferredItem<Item> TOUGH_TIGER_HIDE = relic("tough_tiger_hide", List.of(),
+            "tooltip.mimiworld.tough_tiger_hide.armor",
+            "tooltip.mimiworld.tough_tiger_hide.attack",
+            "tooltip.mimiworld.tough_tiger_hide.penalty");
+
+    /** 月有圆缺：攻击力 +10（暴击与增伤由事件实现）。 */
+    public static final DeferredItem<Item> MOON_PHASES = relic("moon_phases", List.of(
+            relicModifier(Attributes.ATTACK_DAMAGE, 10.0D,
+                    AttributeModifier.Operation.ADD_VALUE, "moon_phases_attack_damage")),
+            "tooltip.mimiworld.moon_phases.crit",
+            "tooltip.mimiworld.moon_phases.attack",
+            "tooltip.mimiworld.moon_phases.vulnerability",
+            "tooltip.mimiworld.moon_phases.monster");
+
+    /** 猩红竖眼：发光与传送（事件实现）。 */
+    public static final DeferredItem<Item> CRIMSON_VERTICAL_EYE = relic("crimson_vertical_eye", List.of(),
+            "tooltip.mimiworld.crimson_vertical_eye.glow",
+            "tooltip.mimiworld.crimson_vertical_eye.teleport",
+            "tooltip.mimiworld.crimson_vertical_eye.wall");
+
+    /** 超越之号角：护甲 +10、最大生命 +10、攻速 +30%。 */
+    public static final DeferredItem<Item> TRANSCENDENCE_HORN = relic("transcendence_horn", List.of(
+            relicModifier(Attributes.ARMOR, 10.0D, AttributeModifier.Operation.ADD_VALUE,
+                    "transcendence_horn_armor"),
+            relicModifier(Attributes.MAX_HEALTH, 10.0D, AttributeModifier.Operation.ADD_VALUE,
+                    "transcendence_horn_max_health"),
+            relicModifier(Attributes.ATTACK_SPEED, 0.30D, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL,
+                    "transcendence_horn_attack_speed")),
+            "tooltip.mimiworld.transcendence_horn.armor",
+            "tooltip.mimiworld.transcendence_horn.max_health",
+            "tooltip.mimiworld.transcendence_horn.attack_speed");
+
+    /** 上古毛皮：抢夺 +2（易怒由事件实现）。 */
+    public static final DeferredItem<Item> ANCIENT_PELT = ITEMS.registerItem(
+            "ancient_pelt", properties -> new AncientPeltItem(properties.stacksTo(1)));
+
+    /** 蛇皮驺尾：移动速度 +0.1、护甲 +5。 */
+    public static final DeferredItem<Item> SNAKESKIN_TAIL = relic("snakeskin_tail", List.of(
+            relicModifier(Attributes.MOVEMENT_SPEED, 0.1D, AttributeModifier.Operation.ADD_VALUE,
+                    "snakeskin_tail_movement_speed"),
+            relicModifier(Attributes.ARMOR, 5.0D, AttributeModifier.Operation.ADD_VALUE,
+                    "snakeskin_tail_armor")),
+            "tooltip.mimiworld.snakeskin_tail.movement_speed",
+            "tooltip.mimiworld.snakeskin_tail.armor");
+
+    /** 暗灵毒牙：攻击力 +25%（暗毒由事件实现）。 */
+    public static final DeferredItem<Item> DARK_SPIRIT_FANG = relic("dark_spirit_fang", List.of(
+            relicModifier(Attributes.ATTACK_DAMAGE, 0.25D, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL,
+                    "dark_spirit_fang_attack_damage")),
+            "tooltip.mimiworld.dark_spirit_fang.attack",
+            "tooltip.mimiworld.dark_spirit_fang.poison");
+
+    /** 天青轮盘：伤害翻倍/减半（事件实现）。 */
+    public static final DeferredItem<Item> AZURE_WHEEL = relic("azure_wheel", List.of(),
+            "tooltip.mimiworld.azure_wheel.double",
+            "tooltip.mimiworld.azure_wheel.half");
+
+    /** 夔牛之力：攻速 +1、攻击力 +20%、护甲 +50%（无视无敌帧由事件实现）。 */
+    public static final DeferredItem<Item> KUI_NIU_POWER = relic("kui_niu_power", List.of(
+            relicModifier(Attributes.ATTACK_SPEED, 1.0D, AttributeModifier.Operation.ADD_VALUE,
+                    "kui_niu_power_attack_speed"),
+            relicModifier(Attributes.ATTACK_DAMAGE, 0.2D, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL,
+                    "kui_niu_power_attack_damage"),
+            relicModifier(Attributes.ARMOR, 0.5D, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL,
+                    "kui_niu_power_armor")),
+            "tooltip.mimiworld.kui_niu_power.no_invulnerability",
+            "tooltip.mimiworld.kui_niu_power.attack_speed",
+            "tooltip.mimiworld.kui_niu_power.attack_damage",
+            "tooltip.mimiworld.kui_niu_power.armor");
+
+    /** 领域展开：范围内敌对生物减甲（事件实现）。 */
+    public static final DeferredItem<Item> DOMAIN_EXPANSION = relic("domain_expansion", List.of(),
+            "tooltip.mimiworld.domain_expansion.armor");
+
+    /** 山海恩泽：跳跃提升与下落增伤（事件实现）。 */
+    public static final DeferredItem<Item> SHANHAI_GRACE = relic("shanhai_grace", List.of(),
+            "tooltip.mimiworld.shanhai_grace.jump",
+            "tooltip.mimiworld.shanhai_grace.fall");
+
+    /** 逆鳞龙胆：抗性提升 IV、护甲 +100%（伤害上限由事件实现）。 */
+    public static final DeferredItem<Item> REVERSE_SCALE_GALL = ITEMS.registerItem(
+            "reverse_scale_gall", properties -> new ReverseScaleGallItem(properties.stacksTo(1)));
+
+    /** 米米圣盾：最大生命 +5（额外生命由事件实现）。 */
+    public static final DeferredItem<Item> MIMI_SHIELD = relic("mimi_shield", List.of(
+            relicModifier(Attributes.MAX_HEALTH, 5.0D, AttributeModifier.Operation.ADD_VALUE,
+                    "mimi_shield_max_health")),
+            "tooltip.mimiworld.mimi_shield.health",
+            "tooltip.mimiworld.mimi_shield.heal",
+            "tooltip.mimiworld.mimi_shield.threshold");
+
+    /** 双倍快乐：主副手同物品时伤害 ×2（事件实现）。 */
+    public static final DeferredItem<Item> DOUBLE_HAPPINESS = relic("double_happiness", List.of(),
+            "tooltip.mimiworld.double_happiness.double");
+
+    /** 多多益善：按周围怪物数量增伤（事件实现）。 */
+    public static final DeferredItem<Item> THE_MORE_THE_MERRIER = relic("the_more_the_merrier", List.of(),
+            "tooltip.mimiworld.the_more_the_merrier.count",
+            "tooltip.mimiworld.the_more_the_merrier.cap");
+
+    // ============================ 生物蛋与鱼桶（第 4 步 · 第一小批） ============================
+
+    /**
+     * 生物蛋：26.3 起由数据组件 ENTITY_DATA 指定实体，颜色/外观由物品模型与贴图承担。
+     *
+     * <p>实体类型必须延迟到物品注册回调里取：物品注册事件早于所有注册表就绪，
+     * 类加载阶段直接 {@code ModEntities.X.get()} 会抛「unbound value」。</p>
+     */
+    private static DeferredItem<Item> spawnEgg(String name, Supplier<EntityType<? extends Mob>> type) {
+        return ITEMS.registerItem(name + "_spawn_egg", properties -> new SpawnEggItem(properties
+                .component(DataComponents.ENTITY_DATA, TypedEntityData.of(type.get(), new CompoundTag()))));
+    }
+
+    public static final DeferredItem<Item> MIMI_SHEEP_SPAWN_EGG =
+            spawnEgg("mimi_sheep", ModEntities.MIMI_SHEEP::get);
+    public static final DeferredItem<Item> ZHUOMI_CHICKEN_SPAWN_EGG =
+            spawnEgg("zhuomi_chicken", ModEntities.ZHUOMI_CHICKEN::get);
+    public static final DeferredItem<Item> MIMOUNIU_SPAWN_EGG =
+            spawnEgg("mimoo_cow", ModEntities.MIMOUNIU::get);
+    public static final DeferredItem<Item> MIHENG_PIG_SPAWN_EGG =
+            spawnEgg("miheng_pig", ModEntities.MIHENG_PIG::get);
+    public static final DeferredItem<Item> TANMI_FISH_SPAWN_EGG =
+            spawnEgg("tanmi_fish", ModEntities.TANMI_FISH::get);
+    public static final DeferredItem<Item> PENMI_FISH_SPAWN_EGG =
+            spawnEgg("penmi_fish", ModEntities.PENMI_FISH::get);
+    public static final DeferredItem<Item> RICE_GOLEM_SPAWN_EGG =
+            spawnEgg("rice_golem", ModEntities.RICE_GOLEM::get);
+
+    // —— 近战亡灵（第 4 步 · 第二小批）生物蛋 ——
+    public static final DeferredItem<Item> MIMI_SKELETON_SPAWN_EGG =
+            spawnEgg("mimi_skeleton", ModEntities.MIMI_SKELETON::get);
+    public static final DeferredItem<Item> CARVED_RICE_SKELETON_SPAWN_EGG =
+            spawnEgg("carved_rice_skeleton", ModEntities.CARVED_RICE_SKELETON::get);
+    public static final DeferredItem<Item> HUMI_CORPSE_SPAWN_EGG =
+            spawnEgg("humi_corpse", ModEntities.HUMI_CORPSE::get);
+    public static final DeferredItem<Item> MIHENG_PIG_CORPSE_SPAWN_EGG =
+            spawnEgg("miheng_pig_corpse", ModEntities.MIHENG_PIG_CORPSE::get);
+
+    // —— 特殊行为敌对（第 4 步 · 第三小批）生物蛋 ——
+    public static final DeferredItem<Item> HAOMI_WOLF_SPAWN_EGG =
+            spawnEgg("haomi_wolf", ModEntities.HAOMI_WOLF::get);
+    public static final DeferredItem<Item> PAMI_CRAWLER_SPAWN_EGG =
+            spawnEgg("pami_crawler", ModEntities.PAMI_CRAWLER::get);
+    public static final DeferredItem<Item> STICKY_RICE_SPIDER_SPAWN_EGG =
+            spawnEgg("sticky_rice_spider", ModEntities.STICKY_RICE_SPIDER::get);
+    public static final DeferredItem<Item> RICE_WITCH_SPAWN_EGG =
+            spawnEgg("rice_witch", ModEntities.RICE_WITCH::get);
+    public static final DeferredItem<Item> MILAI_HORSE_SPAWN_EGG =
+            spawnEgg("milai_horse", ModEntities.MILAI_HORSE::get);
+
+    // —— 地面精英（第 4 步 · 第四小批）生物蛋 ——
+    public static final DeferredItem<Item> RICE_STEALER_SPAWN_EGG =
+            spawnEgg("rice_stealer", ModEntities.RICE_STEALER::get);
+    public static final DeferredItem<Item> BLIGHTED_THORN_FLOWER_SPAWN_EGG =
+            spawnEgg("blighted_thorn_flower", ModEntities.BLIGHTED_THORN_FLOWER::get);
+    public static final DeferredItem<Item> RICE_MIRAGE_SPAWN_EGG =
+            spawnEgg("rice_mirage", ModEntities.RICE_MIRAGE::get);
+    public static final DeferredItem<Item> LAZY_ELF_SPAWN_EGG =
+            spawnEgg("lazy_elf", ModEntities.LAZY_ELF::get);
+
+    // —— 飞行精英（第 4 步 · 第五小批）生物蛋 ——
+    public static final DeferredItem<Item> RICE_SOUL_SPAWN_EGG =
+            spawnEgg("rice_soul", ModEntities.RICE_SOUL::get);
+    public static final DeferredItem<Item> HUALING_RICE_SPAWN_EGG =
+            spawnEgg("hualing_rice", ModEntities.HUALING_RICE::get);
+
+    // —— 飞行/陆空怪（第 4 步 · 第六小批）生物蛋 ——
+    public static final DeferredItem<Item> EXPLOSIVE_RICE_SPIRIT_SPAWN_EGG =
+            spawnEgg("explosive_rice_spirit", ModEntities.EXPLOSIVE_RICE_SPIRIT::get);
+    public static final DeferredItem<Item> RICE_WOLF_VULTURE_SPAWN_EGG =
+            spawnEgg("rice_wolf_vulture", ModEntities.RICE_WOLF_VULTURE::get);
+
+    /** 贪米鱼桶：用水桶装取/倒出贪米鱼。 */
+    public static final DeferredItem<Item> TANMI_FISH_BUCKET = ITEMS.registerItem("tanmi_fish_bucket",
+            properties -> new MobBucketItem(ModEntities.TANMI_FISH.get(), Fluids.WATER,
+                    SoundEvents.BUCKET_EMPTY_FISH, properties.stacksTo(1)));
+
+    /** 喷米鱼桶：用水桶装取/倒出喷米鱼。 */
+    public static final DeferredItem<Item> PENMI_FISH_BUCKET = ITEMS.registerItem("penmi_fish_bucket",
+            properties -> new MobBucketItem(ModEntities.PENMI_FISH.get(), Fluids.WATER,
+                    SoundEvents.BUCKET_EMPTY_FISH, properties.stacksTo(1)));
+
+    /** 米桶：绑定米汤流体，行为同原版水桶。 */
+    public static final DeferredItem<Item> RICE_BUCKET = ITEMS.registerItem("rice_bucket",
+            properties -> new BucketItem(com.mimiworld.mimiworld.fluid.ModFluids.RICE_SOUP.get(),
+                    properties.stacksTo(1)));
+
+    /** 饭桶：绑定饭汤流体，行为同原版水桶。 */
+    public static final DeferredItem<Item> RICE_PAIL = ITEMS.registerItem("rice_pail",
+            properties -> new BucketItem(com.mimiworld.mimiworld.fluid.ModFluids.RICE_BROTH.get(),
+                    properties.stacksTo(1)));
+
+    /** 米米之眼：激活米米传送器，也是米米维度内的返程钥匙。 */
+    public static final DeferredItem<Item> MIMI_EYE = ITEMS.registerItem("mimi_eye",
+            properties -> new com.mimiworld.mimiworld.item.MimiEyeItem(properties.stacksTo(64)));
+
+    /** 米米传送器方块物品。 */
+    public static final DeferredItem<BlockItem> MIMI_TELEPORTER = blockItem(ModBlocks.MIMI_TELEPORTER);
+
+    /** 猴王金箍棒（Boss 武器）：攻击 +15 / 攻速 -3.2 / 触及 +3，命中附加虚弱 I。 */
+    public static final DeferredItem<Item> MONKEY_KING_RUYI_STAFF = ITEMS.registerItem("monkey_king_ruyi_staff",
+            properties -> new MonkeyKingRuyiStaffItem(MonkeyKingRuyiStaffItem.createProperties(properties)));
+
+    /** 深染残堕天翼（鞘翅类物品）。 */
+    public static final DeferredItem<Item> DEEP_DYED_REMNANT_HEAVEN_WING =
+            ITEMS.registerItem("deep_dyed_remnant_heaven_wing",
+                    properties -> new Item(properties.stacksTo(1).durability(432)));
+
+    // ---- Boss / 残堕界精英生物蛋 ----
+    public static final DeferredItem<Item> MIMI_MONKEY_KING_SPAWN_EGG =
+            spawnEgg("mimi_monkey_king", ModEntities.MIMI_MONKEY_KING::get);
+    public static final DeferredItem<Item> RICE_CRYSTAL_TIGER_KING_SPAWN_EGG =
+            spawnEgg("rice_crystal_tiger_king", ModEntities.RICE_CRYSTAL_TIGER_KING::get);
+    public static final DeferredItem<Item> SUPER_CRYSTAL_COW_KING_SPAWN_EGG =
+            spawnEgg("super_crystal_cow_king", ModEntities.SUPER_CRYSTAL_COW_KING::get);
+    public static final DeferredItem<Item> HEAVY_CRYSTAL_RABBIT_KING_SPAWN_EGG =
+            spawnEgg("heavy_crystal_rabbit_king", ModEntities.HEAVY_CRYSTAL_RABBIT_KING::get);
+    public static final DeferredItem<Item> COMPOUND_AZURE_PYTHON_SPAWN_EGG =
+            spawnEgg("compound_azure_python", ModEntities.COMPOUND_AZURE_PYTHON::get);
+    public static final DeferredItem<Item> CLEANSING_LONGEVITY_KUI_SPAWN_EGG =
+            spawnEgg("cleansing_longevity_kui", ModEntities.CLEANSING_LONGEVITY_KUI::get);
+    public static final DeferredItem<Item> LAZIEST_FINAL_DRAGON_SPAWN_EGG =
+            spawnEgg("laziest_final_dragon", ModEntities.LAZIEST_FINAL_DRAGON::get);
+    public static final DeferredItem<Item> DIBAZONGZUILONG_SPAWN_EGG =
+            spawnEgg("dibazongzuilong", ModEntities.DIBAZONGZUILONG::get);
+    public static final DeferredItem<Item> FALLEN_RICE_PHOENIX_SPAWN_EGG =
+            spawnEgg("fallen_rice_phoenix", ModEntities.FALLEN_RICE_PHOENIX::get);
+    public static final DeferredItem<Item> JIETIAN_RICE_SPAWN_EGG =
+            spawnEgg("jietian_rice", ModEntities.JIETIAN_RICE::get);
+    public static final DeferredItem<Item> CHAOTIC_VOID_TOUCHER_SPAWN_EGG =
+            spawnEgg("chaotic_void_toucher", ModEntities.CHAOTIC_VOID_TOUCHER::get);
+    public static final DeferredItem<Item> MOMI_ENTRANT_SPAWN_EGG =
+            spawnEgg("momi_entrant", ModEntities.MOMI_ENTRANT::get);
+    public static final DeferredItem<Item> PALE_MERMAID_SPAWN_EGG =
+            spawnEgg("pale_mermaid", ModEntities.PALE_MERMAID::get);
+    public static final DeferredItem<Item> WANGMI_WOUNDED_MERMAID_SPAWN_EGG =
+            spawnEgg("wangmi_wounded_mermaid", ModEntities.WANGMI_WOUNDED_MERMAID::get);
+
     // ============================ 方块物品 ============================
 
     /** 注册普通方块物品（放置后的方块见 ModBlocks）。 */
@@ -1233,18 +1550,24 @@ public class ModItems {
         return ITEMS.registerSimpleBlockItem(block);
     }
 
-    /** 米原木 */
-    public static final DeferredItem<BlockItem> RICE_LOG = blockItem(ModBlocks.RICE_LOG);
-    /** 米木板 */
-    public static final DeferredItem<BlockItem> RICE_PLANKS = blockItem(ModBlocks.RICE_PLANKS);
+    /** 米原木（作燃料可烧 3 个物品） */
+    public static final DeferredItem<BlockItem> RICE_LOG = ITEMS.registerItem("rice_log",
+            properties -> new BlockItem(ModBlocks.RICE_LOG.get(),
+                    properties.component(DataComponents.COOKING_FUEL, ModFuels.WOOD)));
+    /** 米木板（作燃料可烧 3 个物品） */
+    public static final DeferredItem<BlockItem> RICE_PLANKS = ITEMS.registerItem("rice_planks",
+            properties -> new BlockItem(ModBlocks.RICE_PLANKS.get(),
+                    properties.component(DataComponents.COOKING_FUEL, ModFuels.WOOD)));
     /** 米楼梯 */
     public static final DeferredItem<BlockItem> RICE_STAIRS = blockItem(ModBlocks.RICE_STAIRS);
     /** 米台阶 */
     public static final DeferredItem<BlockItem> RICE_SLAB = blockItem(ModBlocks.RICE_SLAB);
     /** 米栅栏 */
     public static final DeferredItem<BlockItem> RICE_FENCE = blockItem(ModBlocks.RICE_FENCE);
-    /** 米树叶 */
-    public static final DeferredItem<BlockItem> RICE_LEAVES = blockItem(ModBlocks.RICE_LEAVES);
+    /** 米树叶（作燃料可烧 0.5 个物品） */
+    public static final DeferredItem<BlockItem> RICE_LEAVES = ITEMS.registerItem("rice_leaves",
+            properties -> new BlockItem(ModBlocks.RICE_LEAVES.get(),
+                    properties.component(DataComponents.COOKING_FUEL, ModFuels.LEAVES)));
     /** 米树苗 */
     public static final DeferredItem<BlockItem> RICE_SAPLING = blockItem(ModBlocks.RICE_SAPLING);
     /** 硬化米 */
@@ -1265,6 +1588,9 @@ public class ModItems {
             blockItem(ModBlocks.COMBUSTIBLE_RICE_ORE);
     /** 米矿石 */
     public static final DeferredItem<BlockItem> RICE_ORE = blockItem(ModBlocks.RICE_ORE);
+    /** 超懒精华矿 */
+    public static final DeferredItem<BlockItem> SUPER_LAZY_ESSENCE_ORE =
+            blockItem(ModBlocks.SUPER_LAZY_ESSENCE_ORE);
     /** 泥米 */
     public static final DeferredItem<BlockItem> MUD_RICE = blockItem(ModBlocks.MUD_RICE);
     /** 粗米块 */
@@ -1283,6 +1609,17 @@ public class ModItems {
     public static final DeferredItem<BlockItem> RICE_POUNDING_TABLE = blockItem(ModBlocks.RICE_POUNDING_TABLE);
     /** 沉淀台 */
     public static final DeferredItem<BlockItem> PRECIPITATION_TABLE = blockItem(ModBlocks.PRECIPITATION_TABLE);
+    /** 凝锭台 */
+    public static final DeferredItem<BlockItem> INGOT_CONDENSATION_TABLE =
+            blockItem(ModBlocks.INGOT_CONDENSATION_TABLE);
+    /** 大煮锅 */
+    public static final DeferredItem<BlockItem> LARGE_COOKING_POT = blockItem(ModBlocks.LARGE_COOKING_POT);
+    /** 巨无霸大大大煮锅 */
+    public static final DeferredItem<BlockItem> JUMBO_MEGA_COOKING_POT = blockItem(ModBlocks.JUMBO_MEGA_COOKING_POT);
+    /** 铁锅 */
+    public static final DeferredItem<BlockItem> IRON_WOK = blockItem(ModBlocks.IRON_WOK);
+    /** 烤箱 */
+    public static final DeferredItem<BlockItem> OVEN = blockItem(ModBlocks.OVEN);
     /** 搅拌器 */
     public static final DeferredItem<BlockItem> MIXER = blockItem(ModBlocks.MIXER);
     /** 炉灶 */
@@ -1307,6 +1644,32 @@ public class ModItems {
                             .food(effectFoodProps(1), consumable(0.5F,
                                     statusEffect(MobEffects.NAUSEA, 100, 0, 1.0F),
                                     statusEffect(MobEffects.SLOWNESS, 100, 1, 1.0F)))));
+
+    // ============================ Boss 头颅摆件与堕落十字架 ============================
+
+    /** 米米猴头 */
+    public static final DeferredItem<BlockItem> MIMI_MONKEY_HEAD = blockItem(ModBlocks.MIMI_MONKEY_HEAD);
+    /** 饭晶虎王头 */
+    public static final DeferredItem<BlockItem> RICE_CRYSTAL_TIGER_KING_HEAD =
+            blockItem(ModBlocks.RICE_CRYSTAL_TIGER_KING_HEAD);
+    /** 超晶牛头 */
+    public static final DeferredItem<BlockItem> SUPER_CRYSTAL_OX_HEAD = blockItem(ModBlocks.SUPER_CRYSTAL_OX_HEAD);
+    /** 重晶兔王头 */
+    public static final DeferredItem<BlockItem> HEAVY_CRYSTAL_RABBIT_KING_HEAD =
+            blockItem(ModBlocks.HEAVY_CRYSTAL_RABBIT_KING_HEAD);
+    /** 复晶天青蟒头 */
+    public static final DeferredItem<BlockItem> COMPOUND_CRYSTAL_AZURE_PYTHON_HEAD =
+            blockItem(ModBlocks.COMPOUND_CRYSTAL_AZURE_PYTHON_HEAD);
+    /** 清洁长命夔头 */
+    public static final DeferredItem<BlockItem> PURIFIED_LONGEVITY_KUI_HEAD =
+            blockItem(ModBlocks.PURIFIED_LONGEVITY_KUI_HEAD);
+    /** 最懒终末龙头 */
+    public static final DeferredItem<BlockItem> LAZIEST_END_DRAGON_HEAD =
+            blockItem(ModBlocks.LAZIEST_END_DRAGON_HEAD);
+    /** 第八宗罪龙头 */
+    public static final DeferredItem<BlockItem> DIBAZONGZUI_HEAD = blockItem(ModBlocks.DIBAZONGZUI_HEAD);
+    /** 堕落十字架 */
+    public static final DeferredItem<BlockItem> FALLEN_CROSS = blockItem(ModBlocks.FALLEN_CROSS);
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

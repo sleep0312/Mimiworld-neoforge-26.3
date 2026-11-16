@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -27,6 +28,11 @@ public class PrecipitationTableBlockEntity extends DualInputProcessorBlockEntity
 
     /** 键：双输入有序化注册名（见 recipeKey）。 */
     private static final Map<String, ProcessorRecipe> RECIPES = new HashMap<>();
+
+    /** JEI 只读快照。 */
+    public static List<ProcessorRecipe> jeiRecipes() {
+        return List.copyOf(RECIPES.values());
+    }
 
     /** 注册一条沉淀配方：inputA + inputB → result，两槽各消耗 1 个。 */
     public static void registerRecipe(Item inputA, Item inputB, ItemStackTemplate result, int processTicks) {

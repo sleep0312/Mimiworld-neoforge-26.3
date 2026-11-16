@@ -1,0 +1,11 @@
+{
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "misc",
+    "ingredients":  [
+                        "mimiworld:rice_bone"
+                    ],
+    "result":  {
+                   "id":  "mimiworld:rice_bone_meal",
+                   "count":  3
+               }
+}

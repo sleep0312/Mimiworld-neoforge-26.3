@@ -1,0 +1,32 @@
+{
+    "parent":  "minecraft:recipes/root",
+    "criteria":  {
+                     "has_the_recipe":  {
+                                            "conditions":  {
+                                                               "recipes":  "mimiworld:cooked_wangmi_wounded_mermaid_leg"
+                                                           },
+                                            "trigger":  "minecraft:recipe_unlocked"
+                                        },
+                     "has_wangmi_wounded_mermaid_leg":  {
+                                                            "conditions":  {
+                                                                               "items":  [
+                                                                                             {
+                                                                                                 "items":  "mimiworld:wangmi_wounded_mermaid_leg"
+                                                                                             }
+                                                                                         ]
+                                                                           },
+                                                            "trigger":  "minecraft:inventory_changed"
+                                                        }
+                 },
+    "requirements":  [
+                         [
+                             "has_wangmi_wounded_mermaid_leg",
+                             "has_the_recipe"
+                         ]
+                     ],
+    "rewards":  {
+                    "recipes":  [
+                                    "mimiworld:cooked_wangmi_wounded_mermaid_leg"
+                                ]
+                }
+}

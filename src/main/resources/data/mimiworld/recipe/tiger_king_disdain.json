@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:super_heavy_crystal",
+                "T":  "mimiworld:tiger_king_razor_claw"
+            },
+    "pattern":  [
+                    " A ",
+                    "ATA",
+                    " A "
+                ],
+    "result":  {
+                   "id":  "mimiworld:tiger_king_disdain"
+               }
+}

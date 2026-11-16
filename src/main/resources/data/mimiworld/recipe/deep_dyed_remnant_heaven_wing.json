@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "A":  "mimiworld:dyeing_solution",
+                "B":  "mimiworld:remnant_fallen_ingot",
+                "C":  "mimiworld:remnant_heaven_wing"
+            },
+    "pattern":  [
+                    "ABA",
+                    "BCB",
+                    "ABA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:deep_dyed_remnant_heaven_wing"
+               }
+}

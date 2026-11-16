@@ -27,6 +27,7 @@ import net.minecraft.world.level.storage.ValueOutput;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -59,6 +60,11 @@ public class RicePoundingTableBlockEntity extends BlockEntity implements MenuPro
     /** 注册一条无序双输入配方。应在模组加载阶段调用。 */
     public static void registerRecipe(Item inputA, Item inputB, ItemStackTemplate result) {
         RECIPES.put(recipeKey(inputA, inputB), new PoundingRecipe(inputA, inputB, result));
+    }
+
+    /** JEI 只读快照。 */
+    public static List<PoundingRecipe> jeiRecipes() {
+        return List.copyOf(RECIPES.values());
     }
 
     private static String recipeKey(Item a, Item b) {

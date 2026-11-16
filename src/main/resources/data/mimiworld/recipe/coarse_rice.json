@@ -1,0 +1,14 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  "mimiworld:rice_essence",
+                "M":  "#mimiworld:meats"
+            },
+    "pattern":  [
+                    "BMB"
+                ],
+    "result":  {
+                   "id":  "mimiworld:coarse_rice"
+               }
+}

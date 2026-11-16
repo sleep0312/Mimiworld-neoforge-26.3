@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:super_lazy_alloy_ingot",
+                "T":  "mimiworld:venom_azure_python_fang"
+            },
+    "pattern":  [
+                    "AAA",
+                    "ATA",
+                    "AAA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:azure_wheel"
+               }
+}

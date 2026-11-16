@@ -1,0 +1,6 @@
+{
+    "parent":  "minecraft:item/generated",
+    "textures":  {
+                     "layer0":  "mimiworld:item/chaotic_void_toucher_spawn_egg"
+                 }
+}

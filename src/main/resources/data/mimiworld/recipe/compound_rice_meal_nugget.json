@@ -1,0 +1,11 @@
+{
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "misc",
+    "ingredients":  [
+                        "mimiworld:compound_rice_meal_ingot"
+                    ],
+    "result":  {
+                   "id":  "mimiworld:compound_rice_meal_nugget",
+                   "count":  9
+               }
+}

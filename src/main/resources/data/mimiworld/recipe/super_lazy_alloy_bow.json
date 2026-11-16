@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "B":  "mimiworld:super_lazy_alloy_ingot",
+                "N":  "mimiworld:refined_reinforced_rice_net",
+                "S":  "mimiworld:reinforced_rice_stick"
+            },
+    "pattern":  [
+                    "BNS",
+                    "NSB",
+                    "BNS"
+                ],
+    "result":  {
+                   "id":  "mimiworld:super_lazy_alloy_bow"
+               }
+}

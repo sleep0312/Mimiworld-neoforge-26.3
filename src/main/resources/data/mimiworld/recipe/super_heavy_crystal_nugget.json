@@ -1,0 +1,11 @@
+{
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "misc",
+    "ingredients":  [
+                        "mimiworld:super_heavy_crystal"
+                    ],
+    "result":  {
+                   "id":  "mimiworld:super_heavy_crystal_nugget",
+                   "count":  9
+               }
+}

@@ -27,6 +27,7 @@ import net.minecraft.world.level.storage.ValueOutput;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -77,6 +78,11 @@ public class RiceMakerBlockEntity extends BlockEntity implements MenuProvider, n
     }
 
     // -------------------- 状态 --------------------
+
+    /** JEI 只读快照。 */
+    public static List<RiceRecipe> jeiRecipes() {
+        return List.copyOf(RECIPES.values());
+    }
 
     private final NonNullList<ItemStack> items = NonNullList.withSize(TOTAL_SLOTS, ItemStack.EMPTY);
     private int progress = 0;
@@ -135,11 +141,9 @@ public class RiceMakerBlockEntity extends BlockEntity implements MenuProvider, n
      */
     private boolean processRecipe() {
         RiceRecipe recipe = findRecipe(items.get(SLOT_INPUT));
-        boolean canProcess = recipe != null
-                && water >= recipe.waterCost()
-                && canOutputAccept(recipe.result());
-
-        if (!canProcess) {
+        if (recipe == null
+                || water < recipe.waterCost()
+                || !canOutputAccept(recipe.result())) {
             if (progress != 0) {
                 progress = 0;
                 data.set(DATA_PROGRESS, progress);

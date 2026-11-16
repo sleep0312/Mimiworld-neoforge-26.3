@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "B":  "mimiworld:super_lazy_alloy_ingot",
+                "S":  "mimiworld:reinforced_rice_stick"
+            },
+    "pattern":  [
+                    " B ",
+                    " B ",
+                    " S "
+                ],
+    "result":  {
+                   "id":  "mimiworld:super_lazy_alloy_sword"
+               }
+}

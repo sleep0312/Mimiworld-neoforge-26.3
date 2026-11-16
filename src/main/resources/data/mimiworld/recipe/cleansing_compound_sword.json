@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "B":  "mimiworld:cleansing_compound_ingot",
+                "S":  "mimiworld:reinforced_rice_stick"
+            },
+    "pattern":  [
+                    " B ",
+                    " B ",
+                    " S "
+                ],
+    "result":  {
+                   "id":  "mimiworld:cleansing_compound_sword"
+               }
+}

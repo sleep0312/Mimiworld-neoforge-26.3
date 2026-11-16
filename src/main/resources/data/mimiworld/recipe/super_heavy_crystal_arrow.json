@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:super_heavy_crystal_nugget",
+                "B":  "mimiworld:super_heavy_crystal_rod",
+                "C":  "mimiworld:rice_stone"
+            },
+    "pattern":  [
+                    " A ",
+                    " B ",
+                    " C "
+                ],
+    "result":  {
+                   "id":  "mimiworld:super_heavy_crystal_arrow"
+               }
+}

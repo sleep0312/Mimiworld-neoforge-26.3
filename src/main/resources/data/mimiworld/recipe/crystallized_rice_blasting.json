@@ -1,0 +1,10 @@
+{
+    "type":  "minecraft:blasting",
+    "category":  "misc",
+    "cookingtime":  30,
+    "experience":  0.7,
+    "ingredient":  "mimiworld:crystallized_rice_ore",
+    "result":  {
+                   "id":  "mimiworld:crystallized_rice"
+               }
+}

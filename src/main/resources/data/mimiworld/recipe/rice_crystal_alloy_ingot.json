@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:crystallized_rice_meal",
+                "G":  "minecraft:gold_ingot",
+                "N":  "minecraft:netherite_scrap"
+            },
+    "pattern":  [
+                    "NAN",
+                    "AGA",
+                    "NAN"
+                ],
+    "result":  {
+                   "id":  "mimiworld:rice_crystal_alloy_ingot"
+               }
+}

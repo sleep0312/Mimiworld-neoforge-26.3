@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mimiworld:mimi_skeleton",
+    "mimiworld:carved_rice_skeleton",
+    "mimiworld:humi_corpse",
+    "mimiworld:miheng_pig_corpse"
+  ]
+}

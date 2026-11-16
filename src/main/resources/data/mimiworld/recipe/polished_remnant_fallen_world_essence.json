@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:deep_dyed_remnant_fallen_rice_essence",
+                "B":  "mimiworld:remnant_fallen_abyss_rock"
+            },
+    "pattern":  [
+                    "ABA",
+                    "BAB",
+                    "ABA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:polished_remnant_fallen_world_essence"
+               }
+}

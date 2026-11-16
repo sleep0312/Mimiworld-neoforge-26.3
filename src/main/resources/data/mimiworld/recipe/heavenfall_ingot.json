@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "R":  "mimiworld:remnant_fallen_ingot",
+                "U":  "mimiworld:ruined_heart"
+            },
+    "pattern":  [
+                    "RRR",
+                    "RUR",
+                    "RRR"
+                ],
+    "result":  {
+                   "id":  "mimiworld:heavenfall_ingot"
+               }
+}

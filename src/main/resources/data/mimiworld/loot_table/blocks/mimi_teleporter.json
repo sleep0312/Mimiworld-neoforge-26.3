@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:block",
+    "pools":  [
+                  {
+                      "rolls":  1.0,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "mimiworld:mimi_teleporter"
+                                      }
+                                  ],
+                      "condition":  {
+                                        "type":  "minecraft:survives_explosion"
+                                    }
+                  }
+              ],
+    "random_sequence":  "mimiworld:blocks/mimi_teleporter"
+}

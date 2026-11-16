@@ -44,7 +44,7 @@ public class MimiArrowItem extends ArrowItem {
         return shooter.registryAccess()
                 .lookupOrThrow(Registries.ENCHANTMENT)
                 .get(Enchantments.INFINITY)
-                .map(holder -> bow.getEnchantments().getLevel(holder) > 0)
+                .map(holder -> bow.getTagEnchantments().getLevel(holder) > 0)
                 .orElse(false);
     }
 }

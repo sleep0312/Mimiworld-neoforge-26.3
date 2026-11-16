@@ -26,16 +26,11 @@ public final class CreativeFlightEvents {
 
         CompoundTag data = player.getPersistentData();
         if (player.hasEffect(ModEffects.CREATIVE_FLIGHT)) {
-            if (!player.getAbilities().mayfly) {
-                player.getAbilities().mayfly = true;
-                player.onUpdateAbilities();
-            }
+            ArmorEffectEvents.setMayFly(player, true);
             data.putBoolean(FOOD_FLIGHT_FLAG, true);
         } else if (data.getBoolean(FOOD_FLIGHT_FLAG).orElse(false)) {
             if (!player.getAbilities().instabuild && !ArmorEffectEvents.wearsFlightArmor(player)) {
-                player.getAbilities().mayfly = false;
-                player.getAbilities().flying = false;
-                player.onUpdateAbilities();
+                ArmorEffectEvents.setMayFly(player, false);
             }
             data.putBoolean(FOOD_FLIGHT_FLAG, false);
         }

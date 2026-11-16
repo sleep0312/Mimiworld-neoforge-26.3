@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "A":  "mimiworld:super_lazy_alloy_ingot",
+                "E":  "minecraft:elytra",
+                "M":  "mimiworld:mimi_medley_liquid",
+                "P":  "mimiworld:mimi_phantom_membrane"
+            },
+    "pattern":  [
+                    "AMA",
+                    "PEP",
+                    "AMA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:mimi_divine_wings"
+               }
+}

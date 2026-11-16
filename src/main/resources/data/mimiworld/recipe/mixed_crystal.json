@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:crystallized_rice",
+                "B":  "mimiworld:recrystallized_rice"
+            },
+    "pattern":  [
+                    "ABA",
+                    "BAB",
+                    "ABA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:mixed_crystal"
+               }
+}

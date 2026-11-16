@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  "mimiworld:rice_fruit_cleansing_solution",
+                "W":  "mimiworld:haomi_wolf_heart"
+            },
+    "pattern":  [
+                    " W ",
+                    "WBW",
+                    " W "
+                ],
+    "result":  {
+                   "id":  "mimiworld:poprice_heart_sip_liquid"
+               }
+}

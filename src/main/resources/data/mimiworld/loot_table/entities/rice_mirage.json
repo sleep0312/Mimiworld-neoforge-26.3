@@ -1,0 +1,101 @@
+{
+    "type":  "minecraft:entity",
+    "pools":  [
+                  {
+                      "rolls":  1,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "mimiworld:mirage_bone",
+                                          "modifier":  [
+                                                           {
+                                                               "type":  "minecraft:set_count",
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "min":  1,
+                                                                             "max":  1
+                                                                         }
+                                                           }
+                                                       ]
+                                      }
+                                  ]
+                  },
+                  {
+                      "rolls":  1,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "mimiworld:cleansing_rice_separation_solution",
+                                          "modifier":  [
+                                                           {
+                                                               "type":  "minecraft:set_count",
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "min":  3,
+                                                                             "max":  3
+                                                                         }
+                                                           }
+                                                       ]
+                                      }
+                                  ]
+                  },
+                  {
+                      "rolls":  1,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "mimiworld:remnant_fallen_ingot",
+                                          "modifier":  [
+                                                           {
+                                                               "type":  "minecraft:set_count",
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "min":  1,
+                                                                             "max":  1
+                                                                         }
+                                                           }
+                                                       ]
+                                      }
+                                  ]
+                  },
+                  {
+                      "rolls":  1,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "mimiworld:half_mirage_meat_slice",
+                                          "modifier":  [
+                                                           {
+                                                               "type":  "minecraft:set_count",
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "min":  5,
+                                                                             "max":  6
+                                                                         }
+                                                           }
+                                                       ]
+                                      }
+                                  ]
+                  },
+                  {
+                      "rolls":  1,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "mimiworld:rice_mirage_grease",
+                                          "modifier":  [
+                                                           {
+                                                               "type":  "minecraft:set_count",
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "min":  5,
+                                                                             "max":  6
+                                                                         }
+                                                           }
+                                                       ]
+                                      }
+                                  ]
+                  }
+              ],
+    "random_sequence":  "mimiworld:entities/rice_mirage"
+}

@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:super_heavy_crystal",
+                "H":  "mimiworld:crystallized_rice_meal",
+                "X":  "mimiworld:rice_crystal_alloy_ingot"
+            },
+    "pattern":  [
+                    "AXA",
+                    "XHX",
+                    "AXA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:compound_rice_meal_ingot"
+               }
+}

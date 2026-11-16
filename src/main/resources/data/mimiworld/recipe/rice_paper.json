@@ -1,0 +1,15 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "F":  "mimiworld:rice_pomace"
+            },
+    "pattern":  [
+                    "   ",
+                    "FFF",
+                    "   "
+                ],
+    "result":  {
+                   "id":  "mimiworld:rice_paper"
+               }
+}

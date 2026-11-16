@@ -1,0 +1,32 @@
+{
+    "parent":  "minecraft:recipes/root",
+    "criteria":  {
+                     "has_rice_phoenix_meat_chunk":  {
+                                                         "conditions":  {
+                                                                            "items":  [
+                                                                                          {
+                                                                                              "items":  "mimiworld:rice_phoenix_meat_chunk"
+                                                                                          }
+                                                                                      ]
+                                                                        },
+                                                         "trigger":  "minecraft:inventory_changed"
+                                                     },
+                     "has_the_recipe":  {
+                                            "conditions":  {
+                                                               "recipes":  "mimiworld:cooked_rice_phoenix_meat_chunk"
+                                                           },
+                                            "trigger":  "minecraft:recipe_unlocked"
+                                        }
+                 },
+    "requirements":  [
+                         [
+                             "has_rice_phoenix_meat_chunk",
+                             "has_the_recipe"
+                         ]
+                     ],
+    "rewards":  {
+                    "recipes":  [
+                                    "mimiworld:cooked_rice_phoenix_meat_chunk"
+                                ]
+                }
+}

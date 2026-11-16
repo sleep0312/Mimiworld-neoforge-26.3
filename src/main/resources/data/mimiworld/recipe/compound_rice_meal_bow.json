@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "F":  "mimiworld:refined_reinforced_rice_net",
+                "P":  "mimiworld:compound_rice_meal_ingot",
+                "S":  "mimiworld:reinforced_rice_stick"
+            },
+    "pattern":  [
+                    "FPS",
+                    "PSF",
+                    "FPS"
+                ],
+    "result":  {
+                   "id":  "mimiworld:compound_rice_meal_bow"
+               }
+}

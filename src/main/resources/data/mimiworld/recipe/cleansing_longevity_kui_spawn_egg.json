@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  "mimiworld:super_lazy_alloy_ingot",
+                "F":  "mimiworld:large_summoner",
+                "M":  "mimiworld:mimi_medley_liquid"
+            },
+    "pattern":  [
+                    "BMB",
+                    "MFM",
+                    "BMB"
+                ],
+    "result":  {
+                   "id":  "mimiworld:cleansing_longevity_kui_spawn_egg"
+               }
+}

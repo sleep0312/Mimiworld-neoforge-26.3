@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "building",
+    "key":  {
+                "B":  "minecraft:beef",
+                "C":  "minecraft:chicken",
+                "M":  "minecraft:mutton",
+                "P":  "minecraft:porkchop",
+                "W":  "minecraft:wheat"
+            },
+    "pattern":  [
+                    "WMW",
+                    "BWC",
+                    "WPW"
+                ],
+    "result":  {
+                   "id":  "mimiworld:coarse_rice_block"
+               }
+}

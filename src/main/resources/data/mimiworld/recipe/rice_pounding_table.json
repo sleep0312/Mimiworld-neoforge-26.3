@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "building",
+    "key":  {
+                "H":  "mimiworld:crystallized_rice_meal",
+                "L":  "mimiworld:rice_log",
+                "R":  "minecraft:redstone"
+            },
+    "pattern":  [
+                    "LLL",
+                    "RHR",
+                    "LLL"
+                ],
+    "result":  {
+                   "id":  "mimiworld:rice_pounding_table"
+               }
+}

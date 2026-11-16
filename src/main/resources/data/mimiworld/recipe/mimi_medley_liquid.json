@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:mimi_medley",
+                "B":  "mimiworld:rice_fruit_cleansing_solution"
+            },
+    "pattern":  [
+                    "AAA",
+                    "ABA",
+                    "AAA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:mimi_medley_liquid"
+               }
+}

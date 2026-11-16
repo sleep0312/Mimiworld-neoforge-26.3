@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "F":  "mimiworld:super_lazy_alloy_ingot",
+                "M":  "mimiworld:molten_mixed_crystal",
+                "S":  "mimiworld:rice_stone"
+            },
+    "pattern":  [
+                    "SMS",
+                    "MFM",
+                    "SMS"
+                ],
+    "result":  {
+                   "id":  "mimiworld:super_lazy_alloy_pickaxe_head"
+               }
+}

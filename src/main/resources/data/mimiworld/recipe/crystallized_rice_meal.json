@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:rice_pail",
+                "N":  "minecraft:diamond"
+            },
+    "pattern":  [
+                    "ANA",
+                    "NAN",
+                    "ANA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:crystallized_rice_meal"
+               }
+}

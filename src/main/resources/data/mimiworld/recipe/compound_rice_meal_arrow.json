@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:compound_rice_meal_nugget",
+                "B":  "mimiworld:compound_rice_meal_rod",
+                "C":  "mimiworld:rice_stone"
+            },
+    "pattern":  [
+                    " A ",
+                    " B ",
+                    " C "
+                ],
+    "result":  {
+                   "id":  "mimiworld:compound_rice_meal_arrow"
+               }
+}

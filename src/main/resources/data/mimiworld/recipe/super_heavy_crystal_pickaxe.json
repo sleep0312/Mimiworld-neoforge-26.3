@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "F":  "mimiworld:refined_rice_fiber",
+                "H":  "mimiworld:super_heavy_crystal_pickaxe_head",
+                "R":  "mimiworld:super_heavy_crystal_rod"
+            },
+    "pattern":  [
+                    " H ",
+                    " F ",
+                    " R "
+                ],
+    "result":  {
+                   "id":  "mimiworld:super_heavy_crystal_pickaxe"
+               }
+}

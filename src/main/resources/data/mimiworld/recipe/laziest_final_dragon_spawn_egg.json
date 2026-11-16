@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "M":  "mimiworld:laziest_summoner",
+                "N":  "mimiworld:dyeing_solution",
+                "R":  "mimiworld:heavenfall_ingot"
+            },
+    "pattern":  [
+                    "RNR",
+                    "NMN",
+                    "RNR"
+                ],
+    "result":  {
+                   "id":  "mimiworld:laziest_final_dragon_spawn_egg"
+               }
+}

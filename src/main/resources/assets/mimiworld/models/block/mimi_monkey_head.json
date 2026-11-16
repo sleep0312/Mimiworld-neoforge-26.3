@@ -1,0 +1,7 @@
+﻿{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "mimiworld:block/mimi_monkey_head"
+  }
+}
+

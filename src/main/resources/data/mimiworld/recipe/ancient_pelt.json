@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:compound_rice_meal_ingot",
+                "T":  "mimiworld:ox_king_crystal_horn"
+            },
+    "pattern":  [
+                    " A ",
+                    "ATA",
+                    " A "
+                ],
+    "result":  {
+                   "id":  "mimiworld:ancient_pelt"
+               }
+}

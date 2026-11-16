@@ -1,0 +1,7 @@
+﻿{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "mimiworld:block/compound_crystal_azure_python_head"
+  }
+}
+

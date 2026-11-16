@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "A":  "mimiworld:super_lazy_alloy_ingot",
+                "B":  "mimiworld:fallen_crown",
+                "C":  "mimiworld:super_lazy_alloy_ingot",
+                "D":  "mimiworld:super_lazy_alloy_pickaxe"
+            },
+    "pattern":  [
+                    "ABA",
+                    "CDC",
+                    "ABA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:laziest_heavenfall_pickaxe"
+               }
+}

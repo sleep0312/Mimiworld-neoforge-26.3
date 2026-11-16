@@ -1,11 +1,15 @@
 package com.mimiworld.mimiworld;
 
+import com.mimiworld.mimiworld.enchantment.ModEnchantments;
+
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -39,6 +43,19 @@ public class ModCreativeTabs {
                                 }))
                                 .toList();
                         items.forEach(output::accept);
+
+                        // 自定义附魔书：与原版附魔书一致，仅 StoredEnchantments 中的等级不同
+                        var enchantments = parameters.holders().lookupOrThrow(Registries.ENCHANTMENT);
+                        for (int level = 1; level <= 5; level++) {
+                            output.accept(EnchantmentHelper.createBook(new EnchantmentInstance(
+                                    enchantments.getOrThrow(ModEnchantments.WEEPING_BLOOD), level)));
+                        }
+                        output.accept(EnchantmentHelper.createBook(new EnchantmentInstance(
+                                enchantments.getOrThrow(ModEnchantments.FLAWLESS), 1)));
+                        for (int level = 1; level <= 5; level++) {
+                            output.accept(EnchantmentHelper.createBook(new EnchantmentInstance(
+                                    enchantments.getOrThrow(ModEnchantments.SWIFT_STRIKE), level)));
+                        }
                     })
                     .build());
 

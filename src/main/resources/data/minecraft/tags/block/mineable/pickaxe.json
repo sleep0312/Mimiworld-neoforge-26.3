@@ -9,6 +9,7 @@
     "mimiworld:coarse_rice_block",
     "mimiworld:rice_block",
     "mimiworld:rice_ore",
+    "mimiworld:super_lazy_essence_ore",
     "mimiworld:rice_stone_block",
     "mimiworld:fallen_altar",
     "mimiworld:remnant_fallen_abyss_rock",
@@ -18,6 +19,12 @@
     "mimiworld:mixer",
     "mimiworld:rice_maker",
     "mimiworld:rice_pounding_table",
-    "mimiworld:precipitation_table"
+    "mimiworld:precipitation_table",
+    "mimiworld:ingot_condensation_table",
+    "mimiworld:large_cooking_pot",
+    "mimiworld:jumbo_mega_cooking_pot",
+    "mimiworld:iron_wok",
+    "mimiworld:oven",
+    "mimiworld:fallen_cross"
   ]
 }

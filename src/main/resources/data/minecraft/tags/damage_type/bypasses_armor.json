@@ -1,0 +1,9 @@
+{
+    "replace":  false,
+    "values":  [
+                   "mimiworld:tiger_king_disdain",
+                   "mimiworld:dragon_beam",
+                   "mimiworld:dragon_breath",
+                   "mimiworld:dragon_charge"
+               ]
+}

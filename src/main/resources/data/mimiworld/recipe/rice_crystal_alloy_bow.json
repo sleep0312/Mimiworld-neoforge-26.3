@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "A":  "mimiworld:rice_crystal_alloy_ingot",
+                "F":  "mimiworld:refined_rice_fiber",
+                "S":  "mimiworld:reinforced_rice_stick"
+            },
+    "pattern":  [
+                    " AS",
+                    "AFS",
+                    " AS"
+                ],
+    "result":  {
+                   "id":  "mimiworld:rice_crystal_alloy_bow"
+               }
+}

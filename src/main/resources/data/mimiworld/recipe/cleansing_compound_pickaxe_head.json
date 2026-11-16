@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "F":  "mimiworld:cleansing_compound_ingot",
+                "R":  "mimiworld:recrystallized_rice",
+                "S":  "mimiworld:rice_stone"
+            },
+    "pattern":  [
+                    "SRS",
+                    "RFR",
+                    "SRS"
+                ],
+    "result":  {
+                   "id":  "mimiworld:cleansing_compound_pickaxe_head"
+               }
+}

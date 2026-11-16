@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:dyeing_solution",
+                "B":  "mimiworld:remnant_fallen_ingot",
+                "C":  "mimiworld:mermaid_tear"
+            },
+    "pattern":  [
+                    "ABA",
+                    "BCB",
+                    "ABA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:deep_dyed_mermaid_tear"
+               }
+}

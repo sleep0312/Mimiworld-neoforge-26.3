@@ -1,0 +1,11 @@
+{
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "misc",
+    "ingredients":  [
+                        "mimiworld:super_lazy_alloy_ingot"
+                    ],
+    "result":  {
+                   "id":  "mimiworld:super_lazy_alloy_nugget",
+                   "count":  9
+               }
+}

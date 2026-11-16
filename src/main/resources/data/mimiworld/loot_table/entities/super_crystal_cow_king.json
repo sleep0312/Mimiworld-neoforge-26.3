@@ -1,0 +1,90 @@
+{
+    "type":  "minecraft:entity",
+    "pools":  [
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  5.0,
+                                                                             "min":  4.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:super_heavy_crystal"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  3.0,
+                                                                             "min":  2.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:ox_king_crystal_horn"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "condition":  {
+                                                            "type":  "minecraft:random_chance",
+                                                            "chance":  0.25
+                                                        },
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  1.0,
+                                                                             "min":  1.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:transcendence_horn"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  1.0,
+                                                                             "min":  1.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:super_crystal_ox_head"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  }
+              ],
+    "random_sequence":  "mimiworld:entities/super_crystal_cow_king"
+}

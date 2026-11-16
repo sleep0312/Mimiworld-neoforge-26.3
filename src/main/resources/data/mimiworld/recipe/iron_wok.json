@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "H":  "minecraft:iron_shovel",
+                "I":  "minecraft:iron_ingot",
+                "P":  "minecraft:heavy_weighted_pressure_plate",
+                "R":  "mimiworld:pot_lid",
+                "S":  "mimiworld:rice_stick"
+            },
+    "pattern":  [
+                    "SR ",
+                    "IHI",
+                    " P "
+                ],
+    "result":  {
+                   "id":  "mimiworld:iron_wok"
+               }
+}

@@ -1,0 +1,14 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "building",
+    "key":  {
+                "P":  "mimiworld:rice_planks"
+            },
+    "pattern":  [
+                    "PPP"
+                ],
+    "result":  {
+                   "id":  "mimiworld:rice_slab",
+                   "count":  6
+               }
+}

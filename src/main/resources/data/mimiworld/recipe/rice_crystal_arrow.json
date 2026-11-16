@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:crystallized_rice_meal",
+                "B":  "mimiworld:rice_stick",
+                "C":  "mimiworld:rice_stone"
+            },
+    "pattern":  [
+                    " A ",
+                    " B ",
+                    " C "
+                ],
+    "result":  {
+                   "id":  "mimiworld:rice_crystal_arrow"
+               }
+}

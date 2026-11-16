@@ -1,0 +1,32 @@
+{
+    "parent":  "minecraft:recipes/root",
+    "criteria":  {
+                     "has_large_summoner":  {
+                                                "conditions":  {
+                                                                   "items":  [
+                                                                                 {
+                                                                                     "items":  "mimiworld:large_summoner"
+                                                                                 }
+                                                                             ]
+                                                               },
+                                                "trigger":  "minecraft:inventory_changed"
+                                            },
+                     "has_the_recipe":  {
+                                            "conditions":  {
+                                                               "recipes":  "mimiworld:compound_azure_python_spawn_egg"
+                                                           },
+                                            "trigger":  "minecraft:recipe_unlocked"
+                                        }
+                 },
+    "requirements":  [
+                         [
+                             "has_large_summoner",
+                             "has_the_recipe"
+                         ]
+                     ],
+    "rewards":  {
+                    "recipes":  [
+                                    "mimiworld:compound_azure_python_spawn_egg"
+                                ]
+                }
+}

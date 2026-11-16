@@ -1,0 +1,32 @@
+{
+    "parent":  "minecraft:recipes/root",
+    "criteria":  {
+                     "has_specialty_fallen_rice":  {
+                                                       "conditions":  {
+                                                                          "items":  [
+                                                                                        {
+                                                                                            "items":  "mimiworld:specialty_fallen_rice"
+                                                                                        }
+                                                                                    ]
+                                                                      },
+                                                       "trigger":  "minecraft:inventory_changed"
+                                                   },
+                     "has_the_recipe":  {
+                                            "conditions":  {
+                                                               "recipes":  "mimiworld:cooked_specialty_fallen_rice"
+                                                           },
+                                            "trigger":  "minecraft:recipe_unlocked"
+                                        }
+                 },
+    "requirements":  [
+                         [
+                             "has_specialty_fallen_rice",
+                             "has_the_recipe"
+                         ]
+                     ],
+    "rewards":  {
+                    "recipes":  [
+                                    "mimiworld:cooked_specialty_fallen_rice"
+                                ]
+                }
+}

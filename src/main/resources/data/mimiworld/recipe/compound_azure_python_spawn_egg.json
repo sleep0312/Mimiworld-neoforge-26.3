@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "E":  "mimiworld:large_summoner",
+                "R":  "mimiworld:rice_crystal_alloy_ingot",
+                "Y":  "mimiworld:poprice_heart_sip_liquid"
+            },
+    "pattern":  [
+                    "RYR",
+                    "YEY",
+                    "RYR"
+                ],
+    "result":  {
+                   "id":  "mimiworld:compound_azure_python_spawn_egg"
+               }
+}

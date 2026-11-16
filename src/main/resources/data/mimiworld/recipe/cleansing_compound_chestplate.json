@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "B":  "mimiworld:cleansing_compound_ingot",
+                "D":  "mimiworld:compound_rice_meal_chestplate",
+                "M":  "mimiworld:refined_rice_fiber",
+                "T":  "mimiworld:rabbit_king_bloody_red_eye"
+            },
+    "pattern":  [
+                    "BBB",
+                    "BTB",
+                    "MDM"
+                ],
+    "result":  {
+                   "id":  "mimiworld:cleansing_compound_chestplate"
+               }
+}

@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "A":  "mimiworld:crystallized_rice_meal",
+                "F":  "mimiworld:refined_rice_fiber",
+                "S":  "mimiworld:rice_stick"
+            },
+    "pattern":  [
+                    "  A",
+                    "FA ",
+                    "SF "
+                ],
+    "result":  {
+                   "id":  "mimiworld:rice_crystal_sword"
+               }
+}

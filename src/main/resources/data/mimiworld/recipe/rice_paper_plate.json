@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:rice_planks",
+                "P":  "minecraft:paper"
+            },
+    "pattern":  [
+                    "   ",
+                    "APA",
+                    " A "
+                ],
+    "result":  {
+                   "id":  "mimiworld:rice_paper_plate"
+               }
+}

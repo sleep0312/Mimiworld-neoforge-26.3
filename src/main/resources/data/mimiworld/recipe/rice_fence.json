@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "P":  "mimiworld:rice_planks",
+                "S":  "mimiworld:rice_stick"
+            },
+    "pattern":  [
+                    "PSP",
+                    "PSP"
+                ],
+    "result":  {
+                   "id":  "mimiworld:rice_fence",
+                   "count":  3
+               }
+}

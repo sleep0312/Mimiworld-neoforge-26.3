@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "F":  "mimiworld:refined_reinforced_rice_net",
+                "H":  "mimiworld:cleansing_compound_pickaxe_head",
+                "R":  "mimiworld:compound_rice_meal_rod"
+            },
+    "pattern":  [
+                    " H ",
+                    " F ",
+                    " R "
+                ],
+    "result":  {
+                   "id":  "mimiworld:cleansing_compound_pickaxe"
+               }
+}

@@ -1,0 +1,131 @@
+{
+    "attributes":  {
+                       "minecraft:gameplay/natural_mob_spawns":  {
+                                                                     "argument":  {
+                                                                                      "spawn_costs":  {
+
+                                                                                                      },
+                                                                                      "spawns_by_category":  {
+                                                                                                                 "ambient":  [
+
+                                                                                                                             ],
+                                                                                                                 "axolotls":  [
+
+                                                                                                                              ],
+                                                                                                                 "creature":  [
+
+                                                                                                                              ],
+                                                                                                                 "misc":  [
+
+                                                                                                                          ],
+                                                                                                                 "monster":  [
+                                                                                                                                 {
+                                                                                                                                     "type":  "mimiworld:jietian_rice",
+                                                                                                                                     "count":  4,
+                                                                                                                                     "weight":  20
+                                                                                                                                 },
+                                                                                                                                 {
+                                                                                                                                     "type":  "mimiworld:chaotic_void_toucher",
+                                                                                                                                     "count":  4,
+                                                                                                                                     "weight":  10
+                                                                                                                                 },
+                                                                                                                                 {
+                                                                                                                                     "type":  "mimiworld:blighted_thorn_flower",
+                                                                                                                                     "count":  4,
+                                                                                                                                     "weight":  5
+                                                                                                                                 },
+                                                                                                                                 {
+                                                                                                                                     "type":  "mimiworld:fallen_rice_phoenix",
+                                                                                                                                     "count":  4,
+                                                                                                                                     "weight":  10
+                                                                                                                                 },
+                                                                                                                                 {
+                                                                                                                                     "type":  "mimiworld:hualing_rice",
+                                                                                                                                     "count":  4,
+                                                                                                                                     "weight":  10
+                                                                                                                                 },
+                                                                                                                                 {
+                                                                                                                                     "type":  "mimiworld:pale_mermaid",
+                                                                                                                                     "count":  4,
+                                                                                                                                     "weight":  15
+                                                                                                                                 },
+                                                                                                                                 {
+                                                                                                                                     "type":  "mimiworld:wangmi_wounded_mermaid",
+                                                                                                                                     "count":  4,
+                                                                                                                                     "weight":  5
+                                                                                                                                 },
+                                                                                                                                 {
+                                                                                                                                     "type":  "mimiworld:rice_mirage",
+                                                                                                                                     "count":  4,
+                                                                                                                                     "weight":  5
+                                                                                                                                 },
+                                                                                                                                 {
+                                                                                                                                     "type":  "mimiworld:lazy_elf",
+                                                                                                                                     "count":  4,
+                                                                                                                                     "weight":  10
+                                                                                                                                 },
+                                                                                                                                 {
+                                                                                                                                     "type":  "mimiworld:rice_wolf_vulture",
+                                                                                                                                     "count":  4,
+                                                                                                                                     "weight":  10
+                                                                                                                                 }
+                                                                                                                             ],
+                                                                                                                 "underground_water_creature":  [
+
+                                                                                                                                                ],
+                                                                                                                 "water_ambient":  [
+
+                                                                                                                                   ],
+                                                                                                                 "water_creature":  [
+
+                                                                                                                                    ]
+                                                                                                             }
+                                                                                  },
+                                                                     "modifier":  "overlay"
+                                                                 },
+                       "minecraft:visual/sky_color":  "#6eb1ff"
+                   },
+    "carvers":  [
+                    "minecraft:nether_cave"
+                ],
+    "downfall":  0.0,
+    "effects":  {
+                    "water_color":  "#3f76e4",
+                    "water_fog_color":  "#050533",
+                    "fog_color":  "#330808"
+                },
+    "features":  [
+                     [
+
+                     ],
+                     [
+
+                     ],
+                     [
+
+                     ],
+                     [
+
+                     ],
+                     [
+
+                     ],
+                     [
+
+                     ],
+                     [
+
+                     ],
+                     [
+
+                     ],
+                     [
+
+                     ],
+                     [
+
+                     ]
+                 ],
+    "has_precipitation":  false,
+    "temperature":  2.0
+}

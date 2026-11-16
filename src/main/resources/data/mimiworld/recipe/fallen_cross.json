@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:cleansing_compound_ingot",
+                "B":  "minecraft:netherite_scrap",
+                "C":  "mimiworld:fallen_crown"
+            },
+    "pattern":  [
+                    " C ",
+                    "ABA",
+                    " A "
+                ],
+    "result":  {
+                   "id":  "mimiworld:fallen_cross"
+               }
+}

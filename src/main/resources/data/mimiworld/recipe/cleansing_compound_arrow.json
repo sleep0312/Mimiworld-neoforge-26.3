@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:cleansing_compound_nugget",
+                "B":  "mimiworld:cleansing_compound_rod",
+                "C":  "mimiworld:rice_stone"
+            },
+    "pattern":  [
+                    " A ",
+                    " B ",
+                    " C "
+                ],
+    "result":  {
+                   "id":  "mimiworld:cleansing_compound_arrow"
+               }
+}

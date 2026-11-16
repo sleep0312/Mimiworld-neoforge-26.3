@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "F":  "mimiworld:refined_rice_fiber",
+                "H":  "mimiworld:compound_rice_meal_pickaxe_head",
+                "R":  "mimiworld:compound_rice_meal_rod"
+            },
+    "pattern":  [
+                    " H ",
+                    " F ",
+                    " R "
+                ],
+    "result":  {
+                   "id":  "mimiworld:compound_rice_meal_pickaxe"
+               }
+}

@@ -1,0 +1,101 @@
+{
+    "type":  "minecraft:entity",
+    "pools":  [
+                  {
+                      "rolls":  1,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "mimiworld:elf_hat",
+                                          "modifier":  [
+                                                           {
+                                                               "type":  "minecraft:set_count",
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "min":  1,
+                                                                             "max":  1
+                                                                         }
+                                                           }
+                                                       ]
+                                      }
+                                  ]
+                  },
+                  {
+                      "rolls":  1,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "mimiworld:compound_rice_meal_ingot",
+                                          "modifier":  [
+                                                           {
+                                                               "type":  "minecraft:set_count",
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "min":  3,
+                                                                             "max":  5
+                                                                         }
+                                                           }
+                                                       ]
+                                      }
+                                  ]
+                  },
+                  {
+                      "rolls":  1,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "mimiworld:remnant_fallen_ingot",
+                                          "modifier":  [
+                                                           {
+                                                               "type":  "minecraft:set_count",
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "min":  1,
+                                                                             "max":  1
+                                                                         }
+                                                           }
+                                                       ]
+                                      }
+                                  ]
+                  },
+                  {
+                      "rolls":  1,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "mimiworld:fragrant_pouch",
+                                          "modifier":  [
+                                                           {
+                                                               "type":  "minecraft:set_count",
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "min":  0,
+                                                                             "max":  1
+                                                                         }
+                                                           }
+                                                       ]
+                                      }
+                                  ]
+                  },
+                  {
+                      "rolls":  1,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "mimiworld:fragrant_powder",
+                                          "modifier":  [
+                                                           {
+                                                               "type":  "minecraft:set_count",
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "min":  16,
+                                                                             "max":  24
+                                                                         }
+                                                           }
+                                                       ]
+                                      }
+                                  ]
+                  }
+              ],
+    "random_sequence":  "mimiworld:entities/lazy_elf"
+}

@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "D":  "minecraft:redstone",
+                "G":  "minecraft:glowstone_dust",
+                "R":  "mimiworld:rice"
+            },
+    "pattern":  [
+                    "RDR",
+                    "DRD",
+                    "RGR"
+                ],
+    "result":  {
+                   "id":  "mimiworld:small_summoner"
+               }
+}

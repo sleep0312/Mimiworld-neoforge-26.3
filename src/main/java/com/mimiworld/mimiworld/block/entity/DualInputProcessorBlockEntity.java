@@ -3,7 +3,6 @@ package com.mimiworld.mimiworld.block.entity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.Containers;
@@ -120,12 +119,10 @@ public abstract class DualInputProcessorBlockEntity extends BlockEntity
         ItemStack inputA = items.get(SLOT_INPUT_A);
         ItemStack inputB = items.get(SLOT_INPUT_B);
         ProcessorRecipe recipe = findRecipe(inputA, inputB);
-        boolean canProcess = recipe != null
-                && inputA.getCount() >= recipe.countA()
-                && (!recipe.hasInputB() || inputB.getCount() >= recipe.countB())
-                && canOutputAccept(recipe.result());
-
-        if (!canProcess) {
+        if (recipe == null
+                || inputA.getCount() < recipe.countA()
+                || (recipe.hasInputB() && inputB.getCount() < recipe.countB())
+                || !canOutputAccept(recipe.result())) {
             if (progress != 0) {
                 progress = 0;
                 data.set(DATA_PROGRESS, progress);

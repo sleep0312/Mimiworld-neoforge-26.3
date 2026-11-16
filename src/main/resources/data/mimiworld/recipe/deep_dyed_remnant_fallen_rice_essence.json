@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:dyeing_solution",
+                "B":  "mimiworld:remnant_fallen_ingot",
+                "C":  "mimiworld:remnant_fallen_rice_essence"
+            },
+    "pattern":  [
+                    "ABA",
+                    "BCB",
+                    "ABA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:deep_dyed_remnant_fallen_rice_essence"
+               }
+}

@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "building",
+    "key":  {
+                "G":  "minecraft:gold_ingot",
+                "N":  "mimiworld:refined_reinforced_rice_net",
+                "T":  "mimiworld:rice_stone_block"
+            },
+    "pattern":  [
+                    "NNN",
+                    " G ",
+                    "TTT"
+                ],
+    "result":  {
+                   "id":  "mimiworld:precipitation_table"
+               }
+}

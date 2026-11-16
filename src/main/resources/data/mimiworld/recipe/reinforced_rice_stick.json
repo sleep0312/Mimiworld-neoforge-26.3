@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "P":  "mimiworld:rice_planks",
+                "Q":  "mimiworld:rice_stick"
+            },
+    "pattern":  [
+                    "PPP",
+                    "QQQ",
+                    "PPP"
+                ],
+    "result":  {
+                   "id":  "mimiworld:reinforced_rice_stick"
+               }
+}

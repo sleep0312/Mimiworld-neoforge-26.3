@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "G":  "minecraft:gold_ingot",
+                "J":  "mimiworld:divine_jade",
+                "R":  "mimiworld:recrystallized_rice",
+                "S":  "mimiworld:cleansing_compound_ingot"
+            },
+    "pattern":  [
+                    "SJS",
+                    "RGR",
+                    "SJS"
+                ],
+    "result":  {
+                   "id":  "mimiworld:golden_rice_jade"
+               }
+}

@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  "mimiworld:rice_bone",
+                "C":  "mimiworld:penmi_fish_sac",
+                "F":  "mimiworld:zhuomi_feather"
+            },
+    "pattern":  [
+                    "FFF",
+                    "BBB",
+                    "CCC"
+                ],
+    "result":  {
+                   "id":  "mimiworld:rice_brush_pen"
+               }
+}

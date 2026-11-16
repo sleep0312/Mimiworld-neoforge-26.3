@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:rice_fruit_black_mixture",
+                "E":  "mimiworld:small_summoner",
+                "S":  "minecraft:netherite_ingot"
+            },
+    "pattern":  [
+                    "SAS",
+                    "AEA",
+                    "SAS"
+                ],
+    "result":  {
+                   "id":  "mimiworld:mimi_monkey_king_spawn_egg"
+               }
+}

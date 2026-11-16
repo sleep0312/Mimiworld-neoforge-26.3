@@ -44,8 +44,12 @@ Mimi World.
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
-#[[mixins]]
-#config="${mod_id}.mixins.json"
+[[mixins]]
+config="${mod_id}.mixins.json"
+
+# 可选兼容 mixin（Jade 效果等级数字显示）：未安装 Jade 时整份配置不生效
+[[mixins]]
+config="${mod_id}.jade.mixins.json"
 
 # The [[accessTransformers]] block allows you to declare where your AT file is.
 # If this block is omitted, a fallback attempt will be made to load an AT from META-INF/accesstransformer.cfg
@@ -85,6 +89,14 @@ Mimi World.
     modId="geckolib"
     type="required"
     versionRange="[5.5.7,)"
+    ordering="AFTER"
+    side="BOTH"
+
+# Curios API：20 件「圣遗物」饰品槽位前置
+[[dependencies.${mod_id}]]
+    modId="curios"
+    type="required"
+    versionRange="[17.0,)"
     ordering="AFTER"
     side="BOTH"
 

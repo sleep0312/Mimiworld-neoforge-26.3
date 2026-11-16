@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "M":  "mimiworld:laziest_summoner",
+                "N":  "mimiworld:polished_remnant_fallen_essence_solution",
+                "R":  "mimiworld:remnant_fallen_world_essence_ingot"
+            },
+    "pattern":  [
+                    "RNR",
+                    "NMN",
+                    "RNR"
+                ],
+    "result":  {
+                   "id":  "mimiworld:dibazongzuilong_spawn_egg"
+               }
+}

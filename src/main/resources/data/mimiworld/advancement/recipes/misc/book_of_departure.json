@@ -1,0 +1,32 @@
+{
+    "parent":  "minecraft:recipes/root",
+    "criteria":  {
+                     "has_book_rice_pen":  {
+                                               "conditions":  {
+                                                                  "items":  [
+                                                                                {
+                                                                                    "items":  "mimiworld:book_rice_pen"
+                                                                                }
+                                                                            ]
+                                                              },
+                                               "trigger":  "minecraft:inventory_changed"
+                                           },
+                     "has_the_recipe":  {
+                                            "conditions":  {
+                                                               "recipes":  "mimiworld:book_of_departure"
+                                                           },
+                                            "trigger":  "minecraft:recipe_unlocked"
+                                        }
+                 },
+    "requirements":  [
+                         [
+                             "has_book_rice_pen",
+                             "has_the_recipe"
+                         ]
+                     ],
+    "rewards":  {
+                    "recipes":  [
+                                    "mimiworld:book_of_departure"
+                                ]
+                }
+}

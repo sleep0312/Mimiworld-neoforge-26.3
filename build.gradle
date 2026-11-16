@@ -70,6 +70,14 @@ repositories {
             includeGroup 'maven.modrinth'
         }
     }
+    // CurseMaven：CurseForge 上的模组（如 Curios 饰品 API）
+    maven {
+        name = 'CurseMaven'
+        url = 'https://cursemaven.com'
+        content {
+            includeGroup 'curse.maven'
+        }
+    }
     mavenCentral()
 }
 
@@ -170,12 +178,35 @@ dependencies {
     // 使用 Modrinth 版本 ID 以明确选中 NeoForge 构件（版本号 5.5.7 默认指向 Fabric 文件）
     implementation "maven.modrinth:geckolib:2s1O42FX"
 
-    // Example optional mod dependency with JEI
-    // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
-    // compileOnly "mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}"
-    // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
-    // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
+    // Curios 饰品 API（NeoForge 26.3）：CurseForge 项目 309927，文件 9521516（2025-11-08 更新）
+    // 供 20 件「圣遗物」饰品使用；编译期与运行期都需要
+    implementation "curse.maven:curios-309927:9521516"
+
+    // ── 可选兼容 mod 的编译期 API（不随本模组发布） ──────────────────────────────
+    // JEI：机器配方分类与催化剂展示（@JeiPlugin 反射加载，未安装 JEI 时不生效）
+    compileOnly "maven.modrinth:jei:hvy9mHtw"
+    // Jade：实体药水效果 HUD 的高等级数字显示（可选兼容 mixin）
+    compileOnly "maven.modrinth:jade:dVB8U7Td"
+
+    // ── 一同测试的辅助 mod（仅运行期，localRuntime 不参与发布依赖） ──────────────
+    // Jade：方块/实体信息 HUD
+    localRuntime "maven.modrinth:jade:dVB8U7Td"
+    // Xaero's Minimap / World Map：小地图与世界地图
+    localRuntime "maven.modrinth:xaeros-minimap:fibBhMQW"
+    localRuntime "maven.modrinth:xaeros-world-map:KeQTErHb"
+    // Cloth Config：配置界面库
+    localRuntime "maven.modrinth:cloth-config:GchRXPnb"
+    // Puzzles Lib + Overflowing Bars：血量条（后者必需 Puzzles Lib）
+    localRuntime "maven.modrinth:puzzles-lib:w6NLSsOT"
+    localRuntime "maven.modrinth:overflowing-bars:bM6ZtP4a"
+    // Advanced Core Info + Advanced Loot Info：信息/掉落信息 HUD（后者必需前者）
+    localRuntime "maven.modrinth:advanced-core-info:w5AgEvoe"
+    localRuntime "maven.modrinth:advanced-loot-info:q18oNPHv"
+    // JEI + MezzConfig：配方查看（JEI 26.3 起依赖 MezzConfig）
+    localRuntime "maven.modrinth:jei:hvy9mHtw"
+    localRuntime "maven.modrinth:mezzconfig:Y5gRtxs4"
+    // Inventory HUD+：CurseForge 项目 357540，26.3 文件 9319619
+    localRuntime "curse.maven:inventory-hud-forge-357540:9319619"
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar

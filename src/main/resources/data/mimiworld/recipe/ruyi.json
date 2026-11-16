@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:rice_crystal_alloy_ingot",
+                "T":  "mimiworld:monkey_king_hair"
+            },
+    "pattern":  [
+                    " A ",
+                    "ATA",
+                    " A "
+                ],
+    "result":  {
+                   "id":  "mimiworld:ruyi"
+               }
+}

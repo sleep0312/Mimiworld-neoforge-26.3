@@ -1,0 +1,130 @@
+{
+    "type":  "minecraft:entity",
+    "pools":  [
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  1.0,
+                                                                             "min":  1.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:monkey_king_ruyi_staff"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  3.0,
+                                                                             "min":  2.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:monkey_king_hair"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "condition":  {
+                                                            "type":  "minecraft:random_chance",
+                                                            "chance":  0.25
+                                                        },
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  1.0,
+                                                                             "min":  1.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:fiery_golden_eyes"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  3.0,
+                                                                             "min":  2.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "minecraft:netherite_ingot"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  1.0,
+                                                                             "min":  1.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:mimi_monkey_head"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  32.0,
+                                                                             "min":  16.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:rice"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  }
+              ],
+    "random_sequence":  "mimiworld:entities/mimi_monkey_king"
+}

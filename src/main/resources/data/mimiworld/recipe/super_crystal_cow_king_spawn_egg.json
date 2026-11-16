@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "C":  "mimiworld:medium_summoner",
+                "L":  "mimiworld:poprice_bloom_liquid",
+                "R":  "mimiworld:super_heavy_crystal"
+            },
+    "pattern":  [
+                    "RLR",
+                    "LCL",
+                    "RLR"
+                ],
+    "result":  {
+                   "id":  "mimiworld:super_crystal_cow_king_spawn_egg"
+               }
+}

@@ -1,0 +1,86 @@
+{
+    "type":  "minecraft:entity",
+    "pools":  [
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  1.0,
+                                                                             "min":  1.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:celestial_phoenix_beak"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  2.0,
+                                                                             "min":  1.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:super_lazy_alloy_ingot"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  1.0,
+                                                                             "min":  1.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:remnant_fallen_ingot"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  2.0,
+                                                                             "min":  1.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:rice_phoenix_meat_chunk"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  }
+              ],
+    "random_sequence":  "mimiworld:entities/fallen_rice_phoenix"
+}

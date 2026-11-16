@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "D":  "minecraft:ancient_debris",
+                "S":  "mimiworld:combustible_solid",
+                "W":  "mimiworld:ancient_sword_intent"
+            },
+    "pattern":  [
+                    "DSD",
+                    "SWS",
+                    "DSD"
+                ],
+    "result":  {
+                   "id":  "mimiworld:ancient_sword_soul"
+               }
+}

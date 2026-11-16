@@ -1,0 +1,23 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:cooked_zhuomi_chicken",
+                "B":  "mimiworld:cooked_mimoo_beef",
+                "C":  "mimiworld:cooked_mimi_mutton",
+                "D":  "mimiworld:cooked_miheng_pork",
+                "E":  "mimiworld:cooked_tanmi_fish",
+                "F":  "mimiworld:rice_fruit",
+                "G":  "mimiworld:rice_fruit_cleansing_solution",
+                "H":  "mimiworld:rotten_rice_flesh",
+                "R":  "mimiworld:rice"
+            },
+    "pattern":  [
+                    "RFA",
+                    "BCD",
+                    "EGH"
+                ],
+    "result":  {
+                   "id":  "mimiworld:mimi_medley"
+               }
+}

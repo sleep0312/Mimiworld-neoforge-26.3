@@ -1,0 +1,23 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "A":  "mimiworld:rice_crystal_alloy_ingot",
+                "B":  "mimiworld:super_heavy_crystal",
+                "C":  "mimiworld:ox_king_crystal_horn",
+                "D":  "mimiworld:compound_rice_meal_ingot",
+                "M":  "mimiworld:rabbit_king_bloody_red_eye",
+                "N":  "minecraft:netherite_ingot",
+                "R":  "mimiworld:rice",
+                "T":  "mimiworld:monkey_king_hair",
+                "U":  "mimiworld:tiger_king_razor_claw"
+            },
+    "pattern":  [
+                    "TNU",
+                    "BRA",
+                    "CDM"
+                ],
+    "result":  {
+                   "id":  "mimiworld:mimi_shield"
+               }
+}

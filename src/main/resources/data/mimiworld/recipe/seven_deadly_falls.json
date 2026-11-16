@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:cleansing_rice_separation_solution",
+                "B":  "mimiworld:fallen_crown",
+                "C":  "mimiworld:rice_stealer_heart",
+                "N":  "minecraft:nether_star",
+                "T":  "mimiworld:fallen_heart",
+                "W":  "mimiworld:final_sword_codex"
+            },
+    "pattern":  [
+                    "CBC",
+                    "AWA",
+                    "NTN"
+                ],
+    "result":  {
+                   "id":  "mimiworld:seven_deadly_falls"
+               }
+}

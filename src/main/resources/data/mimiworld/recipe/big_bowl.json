@@ -1,0 +1,15 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:rice_planks"
+            },
+    "pattern":  [
+                    "   ",
+                    "A A",
+                    " A "
+                ],
+    "result":  {
+                   "id":  "mimiworld:big_bowl"
+               }
+}

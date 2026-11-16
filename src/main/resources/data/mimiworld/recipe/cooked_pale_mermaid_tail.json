@@ -1,0 +1,10 @@
+{
+    "type":  "minecraft:smelting",
+    "category":  "food",
+    "cookingtime":  200,
+    "experience":  0.35,
+    "ingredient":  "mimiworld:pale_mermaid_tail",
+    "result":  {
+                   "id":  "mimiworld:cooked_pale_mermaid_tail"
+               }
+}

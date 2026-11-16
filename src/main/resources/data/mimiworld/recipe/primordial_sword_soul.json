@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:super_lazy_alloy_ingot",
+                "B":  "mimiworld:combustible_solid",
+                "C":  "mimiworld:ancient_sword_soul"
+            },
+    "pattern":  [
+                    "AAA",
+                    "BCB",
+                    "AAA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:primordial_sword_soul"
+               }
+}

@@ -1,0 +1,15 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "R":  "mimiworld:rice"
+            },
+    "pattern":  [
+                    "   ",
+                    " RR",
+                    " RR"
+                ],
+    "result":  {
+                   "id":  "mimiworld:rice_ball"
+               }
+}

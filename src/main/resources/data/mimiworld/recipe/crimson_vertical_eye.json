@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:cleansing_compound_ingot",
+                "T":  "mimiworld:rabbit_king_bloody_red_eye"
+            },
+    "pattern":  [
+                    " A ",
+                    "ATA",
+                    " A "
+                ],
+    "result":  {
+                   "id":  "mimiworld:crimson_vertical_eye"
+               }
+}

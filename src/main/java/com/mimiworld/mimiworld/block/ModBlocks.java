@@ -19,6 +19,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.sounds.AmbientLeavesBlockSoundPlayer;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -160,6 +161,15 @@ public class ModBlocks {
                             .requiresCorrectToolForDrops()
                             .sound(SoundType.STONE));
 
+    /** 超懒精华矿：类似铁矿石，非精准采集掉落超懒精华并额外掉落 3~7 经验。 */
+    public static final DeferredBlock<DropExperienceBlock> SUPER_LAZY_ESSENCE_ORE =
+            BLOCKS.registerBlock("super_lazy_essence_ore",
+                    properties -> new DropExperienceBlock(UniformInt.of(3, 7), properties),
+                    () -> BlockBehaviour.Properties.of()
+                            .strength(3.0F, 3.0F)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.STONE));
+
     /** 泥米：泥巴质地方块，属性照抄原版泥巴。 */
     public static final DeferredBlock<Block> MUD_RICE =
             BLOCKS.registerBlock("mud_rice", Block::new,
@@ -280,6 +290,46 @@ public class ModBlocks {
                             .requiresCorrectToolForDrops()
                             .sound(SoundType.METAL));
 
+    /** 凝锭台：5x5 网格工作台式即时合成，右键打开 GUI。 */
+    public static final DeferredBlock<IngotCondensationTableBlock> INGOT_CONDENSATION_TABLE =
+            BLOCKS.registerBlock("ingot_condensation_table", IngotCondensationTableBlock::new,
+                    () -> BlockBehaviour.Properties.of()
+                            .strength(3.0F, 6.0F)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.METAL));
+
+    /** 大煮锅：3x3 网格 + 右上输入 + 燃料 + 输出，右键打开 GUI。 */
+    public static final DeferredBlock<LargeCookingPotBlock> LARGE_COOKING_POT =
+            BLOCKS.registerBlock("large_cooking_pot", LargeCookingPotBlock::new,
+                    () -> BlockBehaviour.Properties.of()
+                            .strength(3.0F, 6.0F)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.METAL));
+
+    /** 巨无霸大大大煮锅：5x5 网格 + 右上输入 + 燃料 + 输出，右键打开 GUI。 */
+    public static final DeferredBlock<JumboMegaCookingPotBlock> JUMBO_MEGA_COOKING_POT =
+            BLOCKS.registerBlock("jumbo_mega_cooking_pot", JumboMegaCookingPotBlock::new,
+                    () -> BlockBehaviour.Properties.of()
+                            .strength(3.0F, 6.0F)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.METAL));
+
+    /** 铁锅：菱形 4 输入 + 右上输入 + 燃料 + 输出，右键打开 GUI。 */
+    public static final DeferredBlock<IronWokBlock> IRON_WOK =
+            BLOCKS.registerBlock("iron_wok", IronWokBlock::new,
+                    () -> BlockBehaviour.Properties.of()
+                            .strength(3.0F, 6.0F)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.METAL));
+
+    /** 烤箱：3x3 网格 + 右上输入 + 燃料 + 输出，正面朝向放置玩家，右键打开 GUI。 */
+    public static final DeferredBlock<OvenBlock> OVEN =
+            BLOCKS.registerBlock("oven", OvenBlock::new,
+                    () -> BlockBehaviour.Properties.of()
+                            .strength(3.0F, 6.0F)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.METAL));
+
     /** 搅拌器：9 输入 + 1 输出工作台式即时合成，右键打开 GUI。 */
     public static final DeferredBlock<MixerBlock> MIXER =
             BLOCKS.registerBlock("mixer", MixerBlock::new,
@@ -295,6 +345,119 @@ public class ModBlocks {
                             .strength(3.0F, 6.0F)
                             .requiresCorrectToolForDrops()
                             .sound(SoundType.STONE));
+
+    // ============================ Boss 头颅摆件与堕落十字架 ============================
+
+    /** 头颅通用属性：木质、硬度 1.0、空手可采、不遮挡。 */
+    private static BlockBehaviour.Properties headProperties() {
+        return BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.WOOD)
+                .noOcclusion();
+    }
+
+    /** 米米猴头：米米猴王掉落的头颅摆件。 */
+    public static final DeferredBlock<BossHeadBlock> MIMI_MONKEY_HEAD =
+            BLOCKS.registerBlock("mimi_monkey_head",
+                    properties -> new BossHeadBlock(Shapes.box(0.0, 0.0, 0.3125, 1.0, 0.625, 0.6875),
+                            () -> com.mimiworld.mimiworld.block.entity.ModBlockEntities.MIMI_MONKEY_HEAD.get(),
+                            properties),
+                    ModBlocks::headProperties);
+
+    /** 饭晶虎王头。 */
+    public static final DeferredBlock<BossHeadBlock> RICE_CRYSTAL_TIGER_KING_HEAD =
+            BLOCKS.registerBlock("rice_crystal_tiger_king_head",
+                    properties -> new BossHeadBlock(Shapes.box(0.25, 0.0, 0.22, 0.75, 0.7, 0.78),
+                            () -> com.mimiworld.mimiworld.block.entity.ModBlockEntities.RICE_CRYSTAL_TIGER_KING_HEAD.get(),
+                            properties),
+                    ModBlocks::headProperties);
+
+    /** 超晶牛头。 */
+    public static final DeferredBlock<BossHeadBlock> SUPER_CRYSTAL_OX_HEAD =
+            BLOCKS.registerBlock("super_crystal_ox_head",
+                    properties -> new BossHeadBlock(Shapes.box(0.01, 0.0, 0.14, 0.99, 0.72, 0.86),
+                            () -> com.mimiworld.mimiworld.block.entity.ModBlockEntities.SUPER_CRYSTAL_OX_HEAD.get(),
+                            properties),
+                    ModBlocks::headProperties);
+
+    /** 重晶兔王头。 */
+    public static final DeferredBlock<BossHeadBlock> HEAVY_CRYSTAL_RABBIT_KING_HEAD =
+            BLOCKS.registerBlock("heavy_crystal_rabbit_king_head",
+                    properties -> new BossHeadBlock(Shapes.box(0.33, 0.0, 0.34, 0.67, 0.7, 0.66),
+                            () -> com.mimiworld.mimiworld.block.entity.ModBlockEntities.HEAVY_CRYSTAL_RABBIT_KING_HEAD.get(),
+                            properties),
+                    ModBlocks::headProperties);
+
+    /** 复晶天青蟒头。 */
+    public static final DeferredBlock<BossHeadBlock> COMPOUND_CRYSTAL_AZURE_PYTHON_HEAD =
+            BLOCKS.registerBlock("compound_crystal_azure_python_head",
+                    properties -> new BossHeadBlock(Shapes.box(0.30, 0.0, 0.20, 0.70, 0.69, 0.80),
+                            () -> com.mimiworld.mimiworld.block.entity.ModBlockEntities.COMPOUND_CRYSTAL_AZURE_PYTHON_HEAD.get(),
+                            properties),
+                    ModBlocks::headProperties);
+
+    /** 清洁长命夔头。 */
+    public static final DeferredBlock<BossHeadBlock> PURIFIED_LONGEVITY_KUI_HEAD =
+            BLOCKS.registerBlock("purified_longevity_kui_head",
+                    properties -> new BossHeadBlock(Shapes.box(0.18, 0.0, 0.0, 0.82, 0.62, 1.0),
+                            () -> com.mimiworld.mimiworld.block.entity.ModBlockEntities.PURIFIED_LONGEVITY_KUI_HEAD.get(),
+                            properties),
+                    ModBlocks::headProperties);
+
+    /** 最懒终末龙头。 */
+    public static final DeferredBlock<BossHeadBlock> LAZIEST_END_DRAGON_HEAD =
+            BLOCKS.registerBlock("laziest_end_dragon_head",
+                    properties -> new BossHeadBlock(Shapes.box(0.36, 0.0, 0.0, 0.64, 0.54, 1.0),
+                            () -> com.mimiworld.mimiworld.block.entity.ModBlockEntities.LAZIEST_END_DRAGON_HEAD.get(),
+                            properties),
+                    ModBlocks::headProperties);
+
+    /** 第八宗罪龙头。 */
+    public static final DeferredBlock<BossHeadBlock> DIBAZONGZUI_HEAD =
+            BLOCKS.registerBlock("dibazongzui_head",
+                    properties -> new BossHeadBlock(Shapes.box(0.26, 0.0, 0.0, 0.74, 0.65, 1.0),
+                            () -> com.mimiworld.mimiworld.block.entity.ModBlockEntities.DIBAZONGZUI_HEAD.get(),
+                            properties),
+                    ModBlocks::headProperties);
+
+    /** 堕落十字架：暗下界合金质地，需铁镐以上才掉落。 */
+    public static final DeferredBlock<FallenCrossBlock> FALLEN_CROSS =
+            BLOCKS.registerBlock("fallen_cross",
+                    properties -> new FallenCrossBlock(
+                            () -> com.mimiworld.mimiworld.block.entity.ModBlockEntities.FALLEN_CROSS.get(),
+                            properties),
+                    () -> BlockBehaviour.Properties.of()
+                            .strength(3.0F, 6.0F)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.NETHERITE_BLOCK));
+
+    /** 残堕界传送门：贴地紫色星空薄层，实体踩入即与残堕界双向传送。 */
+    public static final DeferredBlock<RemnantFallenPortalBlock> REMNANT_FALLEN_PORTAL =
+            BLOCKS.registerBlock("remnant_fallen_portal", RemnantFallenPortalBlock::new,
+                    () -> BlockBehaviour.Properties.of()
+                            .noCollision()
+                            .noOcclusion()
+                            .lightLevel(state -> 11)
+                            .strength(-1.0F, 3600000.0F)
+                            .sound(SoundType.GLASS));
+
+    /** 米米传送器：传送门框架方块，12 个插眼后激活。 */
+    public static final DeferredBlock<MimiTeleporterBlock> MIMI_TELEPORTER =
+            BLOCKS.registerBlock("mimi_teleporter", MimiTeleporterBlock::new,
+                    () -> BlockBehaviour.Properties.of()
+                            .strength(3.0F, 6.0F)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.METAL));
+
+    /** 米米传送门：仪式激活后生成在框架中心，实体踩入即与米米维度双向传送。 */
+    public static final DeferredBlock<MimiPortalBlock> MIMI_PORTAL =
+            BLOCKS.registerBlock("mimi_portal", MimiPortalBlock::new,
+                    () -> BlockBehaviour.Properties.of()
+                            .noCollision()
+                            .noOcclusion()
+                            .lightLevel(state -> 11)
+                            .strength(-1.0F, 3600000.0F)
+                            .sound(SoundType.GLASS));
 
     public static void register(IEventBus modEventBus) {
         BLOCKS.register(modEventBus);

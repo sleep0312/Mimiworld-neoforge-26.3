@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "L":  "mimiworld:rice_fruit_cleansing_solution",
+                "P":  "mimiworld:rice_paper"
+            },
+    "pattern":  [
+                    "   ",
+                    " L ",
+                    "PPP"
+                ],
+    "result":  {
+                   "id":  "mimiworld:rice_book"
+               }
+}

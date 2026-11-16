@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "D":  "minecraft:dragon_breath",
+                "E":  "minecraft:ender_eye",
+                "N":  "mimiworld:rice_crystal_alloy_ingot",
+                "S":  "minecraft:sculk_sensor"
+            },
+    "pattern":  [
+                    "ENE",
+                    "DSD",
+                    "ENE"
+                ],
+    "result":  {
+                   "id":  "mimiworld:ruined_heart"
+               }
+}

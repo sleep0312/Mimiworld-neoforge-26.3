@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:super_lazy_alloy_ingot",
+                "B":  "mimiworld:super_lazy_divine_sword",
+                "C":  "mimiworld:final_sword_codex"
+            },
+    "pattern":  [
+                    "ABA",
+                    "ACA",
+                    "AAA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:laziest_heavenfall_sword_counterfeit"
+               }
+}

@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:hardened_rice",
+                "F":  "mimiworld:super_heavy_crystal",
+                "S":  "mimiworld:rice_stone"
+            },
+    "pattern":  [
+                    "SAS",
+                    "AFA",
+                    "SAS"
+                ],
+    "result":  {
+                   "id":  "mimiworld:super_heavy_crystal_pickaxe_head"
+               }
+}

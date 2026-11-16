@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:super_lazy_alloy_ingot",
+                "B":  "mimiworld:super_lazy_sword_art",
+                "C":  "mimiworld:crystallized_rice_jade",
+                "H":  "minecraft:dragon_head"
+            },
+    "pattern":  [
+                    "HAA",
+                    "CBC",
+                    "AAH"
+                ],
+    "result":  {
+                   "id":  "mimiworld:final_sword_codex"
+               }
+}

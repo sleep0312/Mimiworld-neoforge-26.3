@@ -1,0 +1,11 @@
+{
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "misc",
+    "ingredients":  [
+                        "mimiworld:rice_crystal_alloy_ingot"
+                    ],
+    "result":  {
+                   "id":  "mimiworld:rice_crystal_alloy_nugget",
+                   "count":  9
+               }
+}

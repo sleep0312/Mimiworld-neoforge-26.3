@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:super_lazy_alloy_ingot",
+                "C":  "minecraft:calibrated_sculk_sensor",
+                "E":  "minecraft:end_crystal",
+                "H":  "minecraft:dragon_head"
+            },
+    "pattern":  [
+                    "HEH",
+                    "ACA",
+                    "HEH"
+                ],
+    "result":  {
+                   "id":  "mimiworld:ancient_sword_intent"
+               }
+}

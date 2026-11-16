@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:rice_fruit_cleansing_solution",
+                "C":  "mimiworld:compound_rice_meal_ingot",
+                "N":  "minecraft:netherite_ingot"
+            },
+    "pattern":  [
+                    "ACA",
+                    "CNC",
+                    "ACA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:cleansing_compound_ingot"
+               }
+}

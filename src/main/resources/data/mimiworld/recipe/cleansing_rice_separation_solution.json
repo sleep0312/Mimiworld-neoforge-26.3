@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:rice_fruit_cleansing_solution",
+                "C":  "mimiworld:combustible_rice"
+            },
+    "pattern":  [
+                    "   ",
+                    " AC",
+                    "   "
+                ],
+    "result":  {
+                   "id":  "mimiworld:cleansing_rice_separation_solution"
+               }
+}

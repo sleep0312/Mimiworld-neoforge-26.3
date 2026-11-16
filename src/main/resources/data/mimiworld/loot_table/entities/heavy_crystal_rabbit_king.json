@@ -1,0 +1,90 @@
+{
+    "type":  "minecraft:entity",
+    "pools":  [
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  5.0,
+                                                                             "min":  4.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:compound_rice_meal_ingot"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  3.0,
+                                                                             "min":  2.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:rabbit_king_bloody_red_eye"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "condition":  {
+                                                            "type":  "minecraft:random_chance",
+                                                            "chance":  0.25
+                                                        },
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  1.0,
+                                                                             "min":  1.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:moon_phases"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  },
+                  {
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "modifier":  [
+                                                           {
+                                                               "add":  false,
+                                                               "count":  {
+                                                                             "type":  "minecraft:uniform",
+                                                                             "max":  1.0,
+                                                                             "min":  1.0
+                                                                         },
+                                                               "type":  "minecraft:set_count"
+                                                           }
+                                                       ],
+                                          "name":  "mimiworld:heavy_crystal_rabbit_king_head"
+                                      }
+                                  ],
+                      "rolls":  1.0
+                  }
+              ],
+    "random_sequence":  "mimiworld:entities/heavy_crystal_rabbit_king"
+}

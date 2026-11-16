@@ -1,0 +1,32 @@
+{
+    "parent":  "minecraft:recipes/root",
+    "criteria":  {
+                     "has_the_recipe":  {
+                                            "conditions":  {
+                                                               "recipes":  "mimiworld:cooked_thorn_petal"
+                                                           },
+                                            "trigger":  "minecraft:recipe_unlocked"
+                                        },
+                     "has_thorn_petal":  {
+                                             "conditions":  {
+                                                                "items":  [
+                                                                              {
+                                                                                  "items":  "mimiworld:thorn_petal"
+                                                                              }
+                                                                          ]
+                                                            },
+                                             "trigger":  "minecraft:inventory_changed"
+                                         }
+                 },
+    "requirements":  [
+                         [
+                             "has_thorn_petal",
+                             "has_the_recipe"
+                         ]
+                     ],
+    "rewards":  {
+                    "recipes":  [
+                                    "mimiworld:cooked_thorn_petal"
+                                ]
+                }
+}

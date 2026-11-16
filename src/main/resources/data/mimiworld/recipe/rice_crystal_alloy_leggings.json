@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "A":  "mimiworld:rice_crystal_alloy_ingot",
+                "D":  "minecraft:netherite_leggings",
+                "M":  "mimiworld:refined_rice_fiber",
+                "T":  "mimiworld:monkey_king_hair"
+            },
+    "pattern":  [
+                    "ADA",
+                    "ATA",
+                    "M M"
+                ],
+    "result":  {
+                   "id":  "mimiworld:rice_crystal_alloy_leggings"
+               }
+}

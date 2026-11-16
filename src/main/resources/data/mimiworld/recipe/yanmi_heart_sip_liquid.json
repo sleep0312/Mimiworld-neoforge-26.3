@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  "mimiworld:rice_fruit_cleansing_solution",
+                "E":  "mimiworld:yanmi_pearl"
+            },
+    "pattern":  [
+                    " E ",
+                    "EBE",
+                    " E "
+                ],
+    "result":  {
+                   "id":  "mimiworld:yanmi_heart_sip_liquid"
+               }
+}

@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "D":  "mimiworld:rice_crystal_alloy_chestplate",
+                "H":  "mimiworld:super_heavy_crystal",
+                "M":  "mimiworld:refined_rice_fiber",
+                "T":  "mimiworld:tiger_king_razor_claw"
+            },
+    "pattern":  [
+                    "HHH",
+                    "HTH",
+                    "MDM"
+                ],
+    "result":  {
+                   "id":  "mimiworld:super_heavy_crystal_chestplate"
+               }
+}

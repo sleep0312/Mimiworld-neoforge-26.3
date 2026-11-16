@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  "mimiworld:rice_fruit_cleansing_solution",
+                "S":  "mimiworld:nianmi_silk_thread"
+            },
+    "pattern":  [
+                    " S ",
+                    "SBS",
+                    " S "
+                ],
+    "result":  {
+                   "id":  "mimiworld:rice_fruit_viscous_mixture"
+               }
+}

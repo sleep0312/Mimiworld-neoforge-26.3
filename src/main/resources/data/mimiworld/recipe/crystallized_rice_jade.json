@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "J":  "mimiworld:golden_rice_jade",
+                "L":  "mimiworld:rice_fruit_cleansing_solution",
+                "S":  "mimiworld:combustible_solid"
+            },
+    "pattern":  [
+                    "SSS",
+                    "LJL",
+                    "SSS"
+                ],
+    "result":  {
+                   "id":  "mimiworld:crystallized_rice_jade"
+               }
+}

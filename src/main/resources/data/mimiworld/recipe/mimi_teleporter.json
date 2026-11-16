@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "D":  "minecraft:reinforced_deepslate",
+                "R":  "mimiworld:rice",
+                "S":  "minecraft:end_stone"
+            },
+    "pattern":  [
+                    "RSR",
+                    "SDS",
+                    "RSR"
+                ],
+    "result":  {
+                   "id":  "mimiworld:mimi_teleporter"
+               }
+}

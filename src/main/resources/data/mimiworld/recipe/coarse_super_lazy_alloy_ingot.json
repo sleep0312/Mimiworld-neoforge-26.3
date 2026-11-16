@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:cleansing_compound_ingot",
+                "C":  "mimiworld:rice_fruit_cleansing_solution",
+                "S":  "mimiworld:super_lazy_essence"
+            },
+    "pattern":  [
+                    "SSS",
+                    "ACA",
+                    "SSS"
+                ],
+    "result":  {
+                   "id":  "mimiworld:coarse_super_lazy_alloy_ingot"
+               }
+}

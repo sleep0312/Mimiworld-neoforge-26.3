@@ -1,0 +1,16 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:cleansing_rice_separation_solution",
+                "B":  "mimiworld:ruined_heart"
+            },
+    "pattern":  [
+                    "ABA",
+                    "BAB",
+                    "ABA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:fallen_heart"
+               }
+}

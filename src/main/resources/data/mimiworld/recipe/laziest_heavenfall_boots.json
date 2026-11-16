@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "A":  "mimiworld:heavenfall_ingot",
+                "D":  "mimiworld:super_lazy_alloy_boots",
+                "N":  "mimiworld:refined_reinforced_rice_net",
+                "T":  "mimiworld:evil_kui_longevity_horn"
+            },
+    "pattern":  [
+                    "ATA",
+                    "ADA",
+                    " N "
+                ],
+    "result":  {
+                   "id":  "mimiworld:laziest_heavenfall_boots"
+               }
+}

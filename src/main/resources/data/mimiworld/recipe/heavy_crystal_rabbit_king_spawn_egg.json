@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "H":  "mimiworld:yanmi_heart_sip_liquid",
+                "O":  "mimiworld:medium_summoner",
+                "R":  "mimiworld:compound_rice_meal_ingot"
+            },
+    "pattern":  [
+                    "RHR",
+                    "HOH",
+                    "RHR"
+                ],
+    "result":  {
+                   "id":  "mimiworld:heavy_crystal_rabbit_king_spawn_egg"
+               }
+}

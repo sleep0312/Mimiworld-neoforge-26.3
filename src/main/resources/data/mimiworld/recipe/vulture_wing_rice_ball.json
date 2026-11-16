@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:kelp_slice",
+                "B":  "mimiworld:onigiri",
+                "C":  "mimiworld:cooked_devourer_vulture_wing"
+            },
+    "pattern":  [
+                    "ABA",
+                    "ACA",
+                    "ABA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:vulture_wing_rice_ball"
+               }
+}

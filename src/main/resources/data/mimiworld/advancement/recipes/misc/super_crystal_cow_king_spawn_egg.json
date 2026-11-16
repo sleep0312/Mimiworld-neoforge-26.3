@@ -1,0 +1,32 @@
+{
+    "parent":  "minecraft:recipes/root",
+    "criteria":  {
+                     "has_medium_summoner":  {
+                                                 "conditions":  {
+                                                                    "items":  [
+                                                                                  {
+                                                                                      "items":  "mimiworld:medium_summoner"
+                                                                                  }
+                                                                              ]
+                                                                },
+                                                 "trigger":  "minecraft:inventory_changed"
+                                             },
+                     "has_the_recipe":  {
+                                            "conditions":  {
+                                                               "recipes":  "mimiworld:super_crystal_cow_king_spawn_egg"
+                                                           },
+                                            "trigger":  "minecraft:recipe_unlocked"
+                                        }
+                 },
+    "requirements":  [
+                         [
+                             "has_medium_summoner",
+                             "has_the_recipe"
+                         ]
+                     ],
+    "rewards":  {
+                    "recipes":  [
+                                    "mimiworld:super_crystal_cow_king_spawn_egg"
+                                ]
+                }
+}

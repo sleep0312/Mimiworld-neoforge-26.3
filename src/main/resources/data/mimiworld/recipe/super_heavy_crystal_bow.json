@@ -1,0 +1,17 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "F":  "mimiworld:refined_reinforced_rice_net",
+                "H":  "mimiworld:super_heavy_crystal",
+                "S":  "mimiworld:reinforced_rice_stick"
+            },
+    "pattern":  [
+                    "FHS",
+                    "HSF",
+                    "FHS"
+                ],
+    "result":  {
+                   "id":  "mimiworld:super_heavy_crystal_bow"
+               }
+}

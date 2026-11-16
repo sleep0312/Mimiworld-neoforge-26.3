@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  "mimiworld:mimi_medley_liquid",
+                "B":  "mimiworld:super_lazy_alloy_arrow",
+                "D":  "minecraft:ancient_debris",
+                "N":  "minecraft:nether_star"
+            },
+    "pattern":  [
+                    "ADA",
+                    "BNB",
+                    "ADA"
+                ],
+    "result":  {
+                   "id":  "mimiworld:fallen_altar"
+               }
+}

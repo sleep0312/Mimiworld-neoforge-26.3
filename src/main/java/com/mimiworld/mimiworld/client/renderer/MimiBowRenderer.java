@@ -20,6 +20,8 @@ public class MimiBowRenderer extends GeoItemRenderer<MimiBowItem> {
 
     public MimiBowRenderer(MimiBowModel model) {
         super(model);
+        // 拉弓时在「string」骨骼上渲染搭箭
+        this.renderLayers.addLayer(new NockedArrowLayer(this));
     }
 
     @Override

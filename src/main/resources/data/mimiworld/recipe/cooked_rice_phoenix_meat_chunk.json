@@ -1,0 +1,10 @@
+{
+    "type":  "minecraft:smelting",
+    "category":  "food",
+    "cookingtime":  200,
+    "experience":  0.35,
+    "ingredient":  "mimiworld:rice_phoenix_meat_chunk",
+    "result":  {
+                   "id":  "mimiworld:cooked_rice_phoenix_meat_chunk"
+               }
+}

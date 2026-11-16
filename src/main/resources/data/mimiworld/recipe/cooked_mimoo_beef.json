@@ -1,0 +1,10 @@
+{
+    "type":  "minecraft:smelting",
+    "category":  "food",
+    "cookingtime":  200,
+    "experience":  0.35,
+    "ingredient":  "mimiworld:raw_mimoo_beef",
+    "result":  {
+                   "id":  "mimiworld:cooked_mimoo_beef"
+               }
+}

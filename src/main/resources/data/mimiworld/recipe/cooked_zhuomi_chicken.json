@@ -1,0 +1,10 @@
+{
+    "type":  "minecraft:smelting",
+    "category":  "food",
+    "cookingtime":  40,
+    "experience":  0.3,
+    "ingredient":  "mimiworld:zhuomi_chicken",
+    "result":  {
+                   "id":  "mimiworld:cooked_zhuomi_chicken"
+               }
+}

@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "mimiworld:item/monkey_king_ruyi_staff",
+    "model": {
+      "type": "geckolib:geckolib"
+    }
+  }
+}

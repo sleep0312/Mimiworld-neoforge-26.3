@@ -1,5 +1,6 @@
 {
   "credit": "Made with Blockbench",
+  "gui_light": "front",
   "parent": "builtin/entity",
   "display": {
     "thirdperson_righthand": {

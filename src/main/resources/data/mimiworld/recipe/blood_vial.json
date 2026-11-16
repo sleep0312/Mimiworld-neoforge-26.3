@@ -1,0 +1,11 @@
+{
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "misc",
+    "ingredients":  [
+                        "#mimiworld:meats",
+                        "minecraft:glass_bottle"
+                    ],
+    "result":  {
+                   "id":  "mimiworld:blood_vial"
+               }
+}
